@@ -14,7 +14,7 @@ Welcome to Cacic's documentation!
 
 
 Indices and tables
-==================
+
 
 * :ref:`genindex`
 * :ref:`modindex`
