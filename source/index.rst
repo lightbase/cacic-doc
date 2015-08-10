@@ -6,7 +6,9 @@
 Welcome to Cacic's documentation!
 =================================
 
+=========
 Contents:
+=========
 
 .. toctree::
    :maxdepth: 2
