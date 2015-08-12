@@ -17,6 +17,7 @@ Contents:
 
 Indices and tables
 
+ `Manual Gerente Cacic <gerente/apresentacao.rst>`_
 
 * :ref:`genindex`
 * :ref:`modindex`
