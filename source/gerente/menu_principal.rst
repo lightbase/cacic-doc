@@ -49,20 +49,6 @@ Utilização do Sistema
 
  Selecione a(s) sub-rede(s) que deseja atualizar e logo em seguida clique em “Executar Atualizações”. 
 
-=====================================
-Configuração de instalação adicional.
-=====================================
-
-**Importar dados do Cacic 2.6**
-
- Esta configuração, permite migrar todos os dados da versão 2.6 para a atual.
-
-+ Acesse o Menu Administração → Importar de 2.6 
-
- Adicione o arquivo .zip para a importação dos dados, gerado pelo Gerente Cacic 2.6 e logo em seguida clique em “Salvar Dados”.
-
-.. image:: img/importar_dados.png
-
 =============================
 A tela principal do Cacic 3.1
 =============================
@@ -235,6 +221,4 @@ Menu Principal.
 
 **Comunidade CACIC:**
 
- Ferramentados sistema Cacic que leva o usuário a uma página da web onde o mesmo poderá encontrar todas as informações pertinentes à utilização e configuração do sistema.
- 
- `<-- Anterior <gerente.rst>`_ <- - -> `Próximo --> <menus_auxiliares.rst>`_
+ Ferramenta do sistema Cacic que leva o usuário a uma página da web onde o mesmo poderá encontrar todas as informações pertinentes à utilização e configuração do sistema.

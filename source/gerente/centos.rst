@@ -2,7 +2,7 @@
 CentOS 6
 ========
 
-**PreparaÁ„o inicial.**
+**Prepara√ß√£o inicial.**
 
 + Instale o software de suporte:
  
@@ -38,7 +38,7 @@ CentOS 6
 ``yum install php54 php54-php php54-php-xml php54-php-pdo php54-php-gd php54-php-mcrypt  php54-php-pgsql
 php54-php-intl php54-php-pecl-apc``                                                                     
 
-+ Habilite nova vers„o do PHP                                                                           
++ Habilite nova vers√£o do PHP                                                                           
 
 ``scl enable php54 "php -v"``
 
@@ -56,20 +56,20 @@ php54-php-intl php54-php-pecl-apc``
 ``wget https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm``
 
 
-+ Corrija o fuso hor·rio do php:
++ Corrija o fuso hor√°rio do php:
 
 ``vi /opt/rh/php54/root/etc/php.ini``
 
 ``date.timezone = America/Sao_Paulo``
 
-``Ajustes de par‚metros``
+``Ajustes de par√¢metros``
 
 ``max_execution_time = 300``
 
 ``memory_limit = 512M``
 
 
-+ Baixe o CÛdigo do Gerente
++ Baixe o C√≥digo do Gerente
 
 ``cd /srv``
 
@@ -79,6 +79,4 @@ php54-php-intl php54-php-pecl-apc``
 
 ``ln -s cacic-3.1.14 cacic``
 
- **Obs.:** Para escolher outra release acesse a p·gina do Cacic e veja a ˙ltima disponÌvel: ``https://github.com/lightbase/cacic/releases``
- 
- `<-- Anterior <instalacao_manual.rst>`_ <- - -> `PrÛximo --> <configuracao.rst>`_
+ **Obs.:** Para escolher outra release acesse a p√°gina do Cacic e veja a √∫ltima dispon√≠vel: ``https://github.com/lightbase/cacic/releases``

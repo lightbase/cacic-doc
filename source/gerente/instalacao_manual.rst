@@ -1,32 +1,30 @@
 =================
-InstalaÁ„o Manual
+Instala√ß√£o Manual
 =================
 
-Este roteiro ir· orient·-lo como fazer uma NOVA instalaÁ„o do Gerente Cacic 3.1 em m·quinas com Sistema Operacional Linux. 
+Este roteiro ir√° orient√°-lo como fazer uma NOVA instala√ß√£o do Gerente Cacic 3.1 em m√°quinas com Sistema Operacional Linux. 
 
-A instalaÁ„o ocorre basicamente por linhas de comando atravÈs do Terminal, para tanto, acesse o Painel Inicial (Launcher) que fica localizado no canto superior esquerdo de sua tela. 
+A instala√ß√£o ocorre basicamente por linhas de comando atrav√©s do Terminal, para tanto, acesse o Painel Inicial (Launcher) que fica localizado no canto superior esquerdo de sua tela. 
 
-ApÛs aparecer a opÁ„o de busca digite ì``Terminal``î e pressione a tecla "``Enter``". Agora seguiremos com os comandos dentro do Terminal. 
+Ap√≥s aparecer a op√ß√£o de busca digite ‚Äú``Terminal``‚Äù e pressione a tecla "``Enter``". Agora seguiremos com os comandos dentro do Terminal. 
 
-Caso n„o o encontre utilize as teclas de atalho ì``CTRL + ALT + T``î. 
+Caso n√£o o encontre utilize as teclas de atalho ‚Äú``CTRL + ALT + T``‚Äù. 
 
 Utilizando o Terminal
 ^^^^^^^^^^^^^^^^^^^^^ 
 
-ObservaÁ„o sobre o uso do terminal: 
+Observa√ß√£o sobre o uso do terminal: 
 
-Dentro do terminal o cursor ficar· sempre depois de "``$``" ou "``#``". 
+Dentro do terminal o cursor ficar√° sempre depois de "``$``" ou "``#``". 
 
-Sempre que o comando a ser copiado for precedido por "``$``", significa que este È um comando de usu·rio normal; 
+Sempre que o comando a ser copiado for precedido por "``$``", significa que este √© um comando de usu√°rio normal; 
 
-Sempre que o comando a ser copiado for precedido por "``#``", significa que este È um comando de usu·rio ì``root``î. 
+Sempre que o comando a ser copiado for precedido por "``#``", significa que este √© um comando de usu√°rio ‚Äú``root``‚Äù. 
 
-Caso o comando a ser copiado n„o seja precedido por "``$``" nem por "``#``", significa que este comando pode ser executado sem restriÁıes. 
+Caso o comando a ser copiado n√£o seja precedido por "``$``" nem por "``#``", significa que este comando pode ser executado sem restri√ß√µes. 
 
-Para acessar como ì``root``î digite "``sudo su``". 
+Para acessar como ‚Äú``root``‚Äù digite "``sudo su``". 
 
-Foi utilizado para este tutorial o ìTerminalî em idioma inglÍs, ent„o as confirmaÁıes apresentadas aqui est„o em (Yes/Y ou No/N), caso seu sistema esteja em portuguÍs confirme com (Sim/S ou N„o/N). 
+Foi utilizado para este tutorial o ‚ÄúTerminal‚Äù em idioma ingl√™s, ent√£o as confirma√ß√µes apresentadas aqui est√£o em (Yes/Y ou No/N), caso seu sistema esteja em portugu√™s confirme com (Sim/S ou N√£o/N). 
 
-Siga a instalaÁ„o passo a passo. Caso algum procedimento venha a falhar, n„o desconsidere pois pode ocasionar outros erros. Corrija-os antes de prosseguir com a instalaÁ„o.
-
-`<-- Anterior <requisitos.rst>`_ <- - -> `PrÛximo --> <centos.rst>`_
+Siga a instala√ß√£o passo a passo. Caso algum procedimento venha a falhar, n√£o desconsidere pois pode ocasionar outros erros. Corrija-os antes de prosseguir com a instala√ß√£o.

@@ -100,5 +100,3 @@ pass senha_ftp
 quit
 
 **O FTP deve estar funcionando e conectando.**
-
-`<-- Anterior <debian_ubuntu.rst>`_ <- - -> `Próximo --> <menu_principal.rst>`_

@@ -102,5 +102,3 @@ Computadores Monitorados por Sistema Operacional
 .. image:: img/computadores_so.png
 
  Exibe um relatório básico sobre os sistemas operacionais encontrados nos relatórios do Cacic.
- 
- `<-- Anterior <menu_principal.rst>`_ <- - -> `Próximo --> <agentes.rst>`_

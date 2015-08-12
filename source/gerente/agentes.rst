@@ -153,5 +153,3 @@ Verificação de Logs no sistema Windows
 ``20/02/2015 - Deletando vestigios de atualizacao...``
 
 ``20/02/2015 - Deletando pasta temporaria...``
-
-`<-- Anterior <menus_auxiliares.rst>`_ - - - `Inicio <../index.rst>`_

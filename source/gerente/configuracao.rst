@@ -248,5 +248,3 @@ Instalando o Symfony
 ``chown -R apache.apache``
 
 **Terminada a instalação e configuração do Gerente Cacic 3.1, execute o navegador.**
-
-`<-- Anterior <centos.rst>`_ <- - -> `Próximo --> <debian_ubuntu.rst>`_

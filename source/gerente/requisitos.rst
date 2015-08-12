@@ -1,8 +1,8 @@
 ===========================
-Requisitos para ImplantaÁ„o
+Requisitos para Implanta√ß√£o
 ===========================
 
-Requisitos Minimos
+Requisitos M√≠nimos
 ==================
 
 
@@ -11,9 +11,9 @@ Requisitos Minimos
 +==================================+=====================================================================+
 |CPU:                              |Pentium/AMD quadcore (ou superior)                                   |
 +----------------------------------+---------------------------------------------------------------------+
-|MemÛria RAM:                      |4 Gbytes                                                             |
+|Mem√≥ria RAM:                      |4 Gbytes                                                             |
 +----------------------------------+---------------------------------------------------------------------+
-|Disco rÌgido:                     |100 Gbytes                                                           |
+|Disco r√≠gido:                     |100 Gbytes                                                           |
 +----------------------------------+---------------------------------------------------------------------+
 |Interface de rede                 |                                                                     |
 +----------------------------------+---------------------------------------------------------------------+
@@ -21,7 +21,7 @@ Requisitos Minimos
 +----------------------------------+---------------------------------------------------------------------+
 |SOFTWARE                                                                                                |
 +=============================+==========================================================================+
-|SISTEMA OPERACIONAL:         |Sistema desenvolvido para qualquer distribuiÁ„o GNU/Linux;)               |
+|SISTEMA OPERACIONAL:         |Sistema desenvolvido para qualquer distribui√ß√£o GNU/Linux;)               |
 +-----------------------------+--------------------------------------------------------------------------+
 |Servidor Web:                |PHP5: 5.4.13 ou superior                                                  |
 +-----------------------------+--------------------------------------------------------------------------+
@@ -29,17 +29,15 @@ Requisitos Minimos
 +-----------------------------+--------------------------------------------------------------------------+
 |PHP:                         |- Criptografia com MCrypt (php-MCrypt)                                    |
 |                             |- PHP com suporte a troca de arquivos por FTP. (php-FTP)                  |
-|                             |- PHP com suporte a conex„o a serviÁo de diretÛrios padr„o LDAP.(php-LDAP)|
+|                             |- PHP com suporte a conex√£o a servi√ßo de diret√≥rios padr√£o LDAP.(php-LDAP)|
 |                             |- PHP com suporte a imagens com GD (php-GD)                               |
 |                             |- PHP intl                                                                |
 |                             |- Biblioteca de criptografia SSL                                          |
 +-----------------------------+--------------------------------------------------------------------------+
-|APACHE:                      |- MemÛria para execuÁ„o de programas PHP:--- 512MB (MINIMO)               |
+|APACHE:                      |- Mem√≥ria para execu√ß√£o de programas PHP:--- 512MB (MINIMO)               |
 +-----------------------------+--------------------------------------------------------------------------+
 
 
-Para o Agente Linux s„o necess·rios o ambiente de desenvolvimento em C;
-Maiores informaÁıes podem ser obtidas nos sÌtios dos respectivos fabricantes: http://httpd.apache.org/; http://www.mysql.com/; http://www.php.net/; http://sourceforge.net; http://www.proftpd.org/
-PrÈ condiÁ„o: … necess·rio estar conectado a internet, e banco de dados PostgreSQL instalado.
-
-`<-- Anterior <apresentacao.rst>`_ <- - -> `PrÛximo --> <instalacao_manual.rst>`_
+Para o Agente Linux s√£o necess√°rios o ambiente de desenvolvimento em C;
+Maiores informa√ß√µes podem ser obtidas nos s√≠tios dos respectivos fabricantes: http://httpd.apache.org/; http://www.mysql.com/; http://www.php.net/; http://sourceforge.net; http://www.proftpd.org/
+Pr√© condi√ß√£o: √â necess√°rio estar conectado a internet, e banco de dados PostgreSQL instalado.

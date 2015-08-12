@@ -280,5 +280,3 @@ Carregando dados iniciais
  Finalize o terminal com "exit" 
 
 **Terminada a instalação e configuração do Gerente Cacic 3.0, execute o navegador.**
-
-`<-- Anterior <configuracao.rst>`_ <- - -> `Próximo --> <gerente.rst>`_

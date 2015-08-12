@@ -2,13 +2,7 @@
 O Sistema Cacic
 ===============
 
-DefiniÁ„o do Sistema
+Defini√ß√£o do Sistema
 ====================
-
-
-O sistema CACIC - Configurador Autom·tico e Coletor de InformaÁıes Computacionais trabalha com o uso de software para as plataformas MS-Windows e GNU/Linux e funciona essencialmente a partir do trabalho de mÛdulos agentes, onde utiliza como base conceitual a metodologia MaSE (Multi-agentCACIC ñ Configurador Autom·tico e Coletor de InformaÁıes Computacionais Software Engineering). Na plataforma MS-Windows, os agentes s„o programas compilados e n„o criam dependÍncias ao seu funcionamento. Dessa forma, qualquer empresa/Ûrg„o que queira utilizar o CACIC n„o necessitar· de softwares adicionais para a implantaÁ„o do Sistema.
-
-
-O Cacic È capaz de fornecer um diagnÛstico preciso do parque computacional e disponibilizar informaÁıes como o n˙mero de equipamentos e sua distribuiÁ„o nos mais diversos Ûrg„os, os tipos de softwares utilizados e licenciados, configuraÁıes de hardware, entre outras. TambÈm pode fornecer informaÁıes patrimoniais e a localizaÁ„o fÌsica dos equipamentos, ampliando o controle do parque computacional e a seguranÁa na rede.
-
-`Proximo --> <requisitos.rst>`_
+O sistema CACIC - Configurador Autom√°tico e Coletor de Informa√ß√µes Computacionais trabalha com o uso de software para as plataformas MS-Windows e GNU/Linux e funciona essencialmente a partir do trabalho de m√≥dulos agentes, onde utiliza como base conceitual a metodologia MaSE (Multi-agentCACIC - Configurador Autom√°tico e Coletor de informa√ß√µes Computacionais Software Engineering). Na plataforma MS-Windows, os agentes s√£o programas compilados e n√£o criam depend√™ncias ao seu funcionamento. Dessa forma, qualquer empresa/√≥rg√£o que queira utilizar o CACIC n√£o necessitar√° de softwares adicionais para a implanta√ß√£o do Sistema. 
+O Cacic √© capaz de fornecer um diagn√≥sco preciso do parque computacional e disponibilizar informa√ß√µes como o n√∫mero de equipamentos e sua distribui√ß√£o nos mais diversos √≥rg√£os, os tipos de softwares utilizados e licenciados, configura√ß√µes de hardware, entre outras. Tamb√©m pode fornecer informa√ß√µes patrimoniais e a localiza√ß√£o f√≠sica dos equipamentos, ampliando o controle do parque computacional e a seguran√ßa na rede.
