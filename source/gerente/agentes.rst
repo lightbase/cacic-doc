@@ -8,15 +8,15 @@ Instalação dos Agentes
 
  Para instalação em ambiente Windows, basta baixar o arquivo “.msi” do repositório e execute o programa. 
 
-..image:: img/instalador1.png
+.. image:: img/instalador1.png
 
  Quando o instalador abrir, clique em “Próximo”.
 
-..image:: img/instalador2.png
+.. image:: img/instalador2.png
 
  Clique em “Instalar” para seguir com a instalação padrão.
 
-..image:: img/instalador3.png
+.. image:: img/instalador3.png
 
  Insira o endereço IP ou o DNS onde o Gerente Cacic se encontra, o usuário e a senha. Logo após, clique em “Instalar”.
 
@@ -26,7 +26,7 @@ Instalação dos Agentes
 
  Altere a chave de API e outros dados, caso queira corrigir e clique em “Salvar Dados”. Será solicitado a instalação de algumas dependências, como o OpenSSL, aceite todas.
 
-..image:: img/instalador4.png
+.. image:: img/instalador4.png
 
  Instalação realizada com sucesso.
 
@@ -154,4 +154,4 @@ Verificação de Logs no sistema Windows
 
 ``20/02/2015 - Deletando pasta temporaria...``
 
-`<-- Anterior <menus_auxiliares.rst>`_ 
+`<-- Anterior <menus_auxiliares.rst>`_ - - - `Inicio <../index.rst>`_

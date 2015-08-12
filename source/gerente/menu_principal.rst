@@ -15,7 +15,7 @@ Utilização do Sistema
 
 + Acesse o Menu Administração → Cadastros → Sub-redes 
 
-..image:: img/cadastro_subrede.png
+.. image:: img/cadastro_subrede.png
 
  Clique em “Adicionar Subrede” preencha os dados e clique em “Salvar Dados”.
 
@@ -29,11 +29,11 @@ Utilização do Sistema
 
  Selecione o módulo que deseja habilitar. 
 
-..image:: img/habilitar_mod.png
+.. image:: img/habilitar_mod.png
 
  Marque as sub-redes e em seguida clique em “Salvar Dados”. 
 
-..image:: img/habilitar_mod1.png
+.. image:: img/habilitar_mod1.png
 
  Com isso, o sistema está pronto para realizar as coletas.
 
@@ -45,7 +45,7 @@ Utilização do Sistema
 
  Mais ao final da página vá até Sub-redes Cadastradas conforme exemplo abaixo.
 
-..image:: img/atualizar_subrede.png
+.. image:: img/atualizar_subrede.png
 
  Selecione a(s) sub-rede(s) que deseja atualizar e logo em seguida clique em “Executar Atualizações”. 
 
@@ -61,7 +61,7 @@ Configuração de instalação adicional.
 
  Adicione o arquivo .zip para a importação dos dados, gerado pelo Gerente Cacic 2.6 e logo em seguida clique em “Salvar Dados”.
 
-..image:: img/importar_dados.png
+.. image:: img/importar_dados.png
 
 =============================
 A tela principal do Cacic 3.1
@@ -77,7 +77,7 @@ Menu Principal.
 
  Os menus do software Cacic são organizados tendo como base os perfis de grupos de usuários.
 
-..image:: img/menu_principal.png
+.. image:: img/menu_principal.png
 
 + **Grupo de usuários “Administradores”:** São os usuários previamente definidos que possuem acesso irrestrito ao sistema.
 
@@ -93,7 +93,7 @@ Menu Principal.
 
  - **Upload de Agentes:** Ferramenta para envio ao servidor de novos binários dos Agentes. Selecione os arquivos referentes à versão do sistema e clique em “Enviar Dados”. Os arquivos devem estar em formato “.zip” ou “.tar.gz”.
 
-..image:: img/upload_agentes.png
+.. image:: img/upload_agentes.png
 
  - **Deploy de Software:** Ferramenta para envio de binários diversos ao sistema. Estes binários não necessariamente são do Cacic. Basta selecionar o arquivo desejado e clicar em “Enviar Dados”.
 

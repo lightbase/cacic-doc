@@ -2,7 +2,7 @@
 Barra de Título e Configurações Rápidas do Sistema
 ==================================================
 
-..image:: img/barra_titulo.png
+.. image:: img/barra_titulo.png
 
  Esta barra da página principal do Cacic é composta pelos seguintes elementos:
 
@@ -41,7 +41,7 @@ Barra de Título e Configurações Rápidas do Sistema
 Barra de atalho para o Cacic e para o Software Cocar
 ====================================================
 
-..image:: img/barra_atalho.png
+.. image:: img/barra_atalho.png
 
 + **Atalhos para a página principal do Cacic:** Em qualquer lugar que o usuário se encontrar na navegação do sistema, basta clicar no ícone do índio colorido ou no botão lateral direito, que será direcionado à página principal do sistema.
 
@@ -51,7 +51,7 @@ Barra de atalho para o Cacic e para o Software Cocar
 Estatísticas do Sistema
 =======================
 
-..image:: img/estatisticas.png
+.. image:: img/estatisticas.png
 
  Pequeno módulo que fornece informações rápidas baseadas nos relatórios do sistema.
 
@@ -67,7 +67,7 @@ Estatísticas do Sistema
 Agentes
 =======
 
-..image:: img/agentes.png
+.. image:: img/agentes.png
 
  Ferramenta de acesso rápido para controle dos Agentes.
 
@@ -75,7 +75,7 @@ Agentes
 Atalhos 
 =======
 
-..image:: img/atalhos.png
+.. image:: img/atalhos.png
 
  Mostram ícones para atalhos rápidos de algumas funcionalidades do sistema:
 
@@ -91,7 +91,7 @@ Atalhos
 Boas vindas 
 ===========
 
-..image:: img/boas_vindas.png
+.. image:: img/boas_vindas.png
 
  Exibe uma mensagem cordial ao usuário, informando a versão principal do sistema e uma descrição sobre o sistema.
 
@@ -99,7 +99,7 @@ Boas vindas
 Computadores Monitorados por Sistema Operacional
 ================================================
 
-..image:: img/computadores_so.png
+.. image:: img/computadores_so.png
 
  Exibe um relatório básico sobre os sistemas operacionais encontrados nos relatórios do Cacic.
  
