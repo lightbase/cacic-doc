@@ -1,8 +1,6 @@
 Documentação do Projeto Cacic
 =================================
 
-Documentação do Projeto Cacic
-
 .. _gerente-docs:
 
 .. toctree::
@@ -10,6 +8,7 @@ Documentação do Projeto Cacic
    :caption: Documentação do Módulo Gerente
    
    gerente/index
+   gerente/apresentacao
 
 .. _supergerente-docs:
 
