@@ -394,7 +394,7 @@ Utilização do Sistema
 
 .. image:: img/agentes.png
 
- Ferramenta de acesso rápido para controle dos Agentes.
+Ferramenta de acesso rápido para controle dos Agentes.
 
 ----
  
@@ -402,7 +402,7 @@ Utilização do Sistema
 
 .. image:: img/atalhos.png
 
- Mostram ícones para atalhos rápidos de algumas funcionalidades do sistema:
+Mostram ícones para atalhos rápidos de algumas funcionalidades do sistema:
 
 + **Agentes:** Atalho para atualização de sub-redes.
 
@@ -418,7 +418,7 @@ Utilização do Sistema
 
 .. image:: img/boas_vindas.png
 
- Exibe uma mensagem cordial ao usuário, informando a versão principal do sistema e uma descrição sobre o sistema.
+Exibe uma mensagem cordial ao usuário, informando a versão principal do sistema e uma descrição sobre o sistema.
 
 Computadores Monitorados por Sistema Operacional
 
