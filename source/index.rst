@@ -1,24 +1,29 @@
-.. Cacic documentation master file, created by
-   sphinx-quickstart on Fri Aug  7 17:07:34 2015.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Cacic's documentation!
+Documentação do Projeto Cacic
 =================================
 
 =========
 Contents:
 =========
 
+
+Documentação do Projeto Cacic
+
+
+* :ref:`gerente-docs`
+* :ref:`supergerente-docs`
+
+.. _gerente-docs:
+
 .. toctree::
    :maxdepth: 2
+   :caption: Documentação do Módulo Gerente
+   
+   gerente
 
+.. _supergerente-docs:
 
-
-Indices and tables
-
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+.. toctree::
+   :maxdepth: 2
+   :caption: Documentação do Módulo Super Gerente
+   
+   supergerente
