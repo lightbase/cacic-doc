@@ -1,6 +1,5 @@
-=================
 Instalação Manual
-=================
+^^^^^^^^^^^^^^^^^
 
 Este roteiro irá orientá-lo como fazer uma NOVA instalação do Gerente Cacic 3.1 em máquinas com Sistema Operacional Linux. 
 
