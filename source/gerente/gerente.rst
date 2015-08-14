@@ -18,8 +18,8 @@ Senha: 123456
 
 .. image:: img/login.png
 
-Instalando e configurando o FTP (Debian) 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++ **Instalando e configurando o FTP (Debian) **
+
 
 **Atenção:**
 
@@ -153,14 +153,13 @@ Utilização do Sistema
  Selecione a(s) sub-rede(s) que deseja atualizar e logo em seguida clique em “Executar Atualizações”. 
 
 
-A tela principal do Cacic 3.1
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++ **A tela principal do Cacic 3.1**
+
 
  A tela principal do Cacic (home), é composta por elementos dinâmicos que facilitam a visualização das atividades mais importantes para o gerenciamento do parque computacional. Sua estrutura se divide da seguinte forma: Menu Principal; Barra de título e configurações rápidas do sistema; Barra de atalho para o Cacic e para o Software Cocar; Estatísticas do Sistema; Atalhos; Mensagem de boas vindas ao usuário; Relatório simplificado de Computadores monitorados por sistema operacional. Detalharemos toda estrutura abaixo.
 
 
-Menu Principal.
-^^^^^^^^^^^^^^^
++ **Menu Principal.**
 
 **Conhecendo os menus do Cacic 3.1.**
 
@@ -326,8 +325,7 @@ Menu Principal.
 
  Ferramenta do sistema Cacic que leva o usuário a uma página da web onde o mesmo poderá encontrar todas as informações pertinentes à utilização e configuração do sistema.
  
- Barra de Título e Configurações Rápidas do Sistema
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++ **Barra de Título e Configurações Rápidas do Sistema**
 
 .. image:: img/barra_titulo.png
 
@@ -364,8 +362,9 @@ Menu Principal.
 
 + **Logado como:** Informa o usuário que está utilizando o sistema.
 
-Barra de atalho para o Cacic e para o Software Cocar
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----
+
++ **Barra de atalho para o Cacic e para o Software Cocar**
 
 .. image:: img/barra_atalho.png
 
@@ -373,8 +372,7 @@ Barra de atalho para o Cacic e para o Software Cocar
 
 + **Botões com notificação:** Existe também um botão de atalho para o software Cocar. Ambos os botões possuem um contador de notificações.
 
-Estatísticas do Sistema
-^^^^^^^^^^^^^^^^^^^^^^^
++ **Estatísticas do Sistema**
 
 .. image:: img/estatisticas.png
 
@@ -388,15 +386,17 @@ Estatísticas do Sistema
 
 + **Em relação aos 7 dias anteriores:** Diferença entre nas coletas entre a semana anterior e a semana atual
 
-Agentes
-^^^^^^^
+----
+
++ **Agentes**
 
 .. image:: img/agentes.png
 
  Ferramenta de acesso rápido para controle dos Agentes.
 
-Atalhos 
-^^^^^^^
+----
+ 
++ **Atalhos **
 
 .. image:: img/atalhos.png
 
@@ -410,22 +410,23 @@ Atalhos
 
 + **Módulos:** Atalho para configuração de módulos.
 
-Boas vindas 
-^^^^^^^^^^^
+----
+
++ **Boas vindas **
 
 .. image:: img/boas_vindas.png
 
  Exibe uma mensagem cordial ao usuário, informando a versão principal do sistema e uma descrição sobre o sistema.
 
 Computadores Monitorados por Sistema Operacional
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: img/computadores_so.png
 
  Exibe um relatório básico sobre os sistemas operacionais encontrados nos relatórios do Cacic.
  
- Instalação dos Agentes
-^^^^^^^^^^^^^^^^^^^^^^
+---- 
+ 
++ **Instalação dos Agentes**
 
  A instalação dos agentes nas máquinas ocorre de uma forma clara e intuitiva. Existem instaladores próprios tanto para o sistema Windows quanto para o GNU/Linux.
 
@@ -460,9 +461,11 @@ Computadores Monitorados por Sistema Operacional
  Para instalação em ambiente GNU/Linux é necessário fazer o download do arquivo de instalação no repositório e executar o seguinte comando:
 
 ``Install-cacic -host=EnderecoDoGerente -user=usuário -pass=senha``
- 
-Verificação de Logs no sistema Windows
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+---- 
+
++ **Verificação de Logs no sistema Windows**
+
 
  Os arquivos de log no sistema Windows ficam em “C:\Cacic\Logs”.
 

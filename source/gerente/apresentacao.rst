@@ -2,8 +2,7 @@
 O Sistema Cacic
 ===============
 
-Definição do Sistema
-^^^^^^^^^^^^^^^^^^^^
+**Definição do Sistema**
 
 O sistema CACIC - Configurador Automático e Coletor de Informações Computacionais trabalha com o uso de software para as plataformas MS-Windows e GNU/Linux e funciona essencialmente a partir do trabalho de módulos agentes, onde utiliza como base conceitual a metodologia MaSE (Multi-agentCACIC - Configurador Automático e Coletor de informações Computacionais Software Engineering). Na plataforma MS-Windows, os agentes são programas compilados e não criam dependências ao seu funcionamento. Dessa forma, qualquer empresa/órgão que queira utilizar o CACIC não necessitará de softwares adicionais para a implantação do Sistema. 
 
@@ -61,8 +60,7 @@ Após aparecer a opção de busca digite “``Terminal``” e pressione a tecla 
 
 Caso não o encontre utilize as teclas de atalho “``CTRL + ALT + T``”. 
 
-Utilizando o Terminal
-^^^^^^^^^^^^^^^^^^^^^ 
+**Utilizando o Terminal**
 
 Observação sobre o uso do terminal: 
 
