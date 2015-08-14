@@ -4,8 +4,8 @@ Documentação do Projeto Cacic
 Documentação do Projeto Cacic
 
 
-* :ref: `gerente-docs`
-* :ref: `supergerente-docs`
+* :ref:`gerente-docs`
+* :ref:`supergerente-docs`
 
 .. _gerente-docs:
 
