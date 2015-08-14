@@ -420,11 +420,14 @@ Mostram ícones para atalhos rápidos de algumas funcionalidades do sistema:
 
 Exibe uma mensagem cordial ao usuário, informando a versão principal do sistema e uma descrição sobre o sistema.
 
-Computadores Monitorados por Sistema Operacional
+----
+
+
++ **Computadores Monitorados por Sistema Operacional**
 
 .. image:: img/computadores_so.png
 
- Exibe um relatório básico sobre os sistemas operacionais encontrados nos relatórios do Cacic.
+Exibe um relatório básico sobre os sistemas operacionais encontrados nos relatórios do Cacic.
  
 ---- 
  
