@@ -9,6 +9,15 @@ Documentação do Projeto Cacic
    
    gerente/index
    gerente/apresentacao
+   gerente/requisitos
+   gerente/instalacao_manual
+   gerente/centos
+   gerente/configuracao
+   gerente/debian_ubuntu
+   gerente/gerente
+   gerente/menu_principal
+   gerente/menus_auxiliares
+   gerente/agentes
 
 .. _supergerente-docs:
 
