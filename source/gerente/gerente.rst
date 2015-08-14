@@ -329,7 +329,7 @@ Utilização do Sistema
 
 .. image:: img/barra_titulo.png
 
- Esta barra da página principal do Cacic é composta pelos seguintes elementos:
+Esta barra da página principal do Cacic é composta pelos seguintes elementos:
 
 ----
 
@@ -378,7 +378,7 @@ Utilização do Sistema
 
 .. image:: img/estatisticas.png
 
- Pequeno módulo que fornece informações rápidas baseadas nos relatórios do sistema.
+Pequeno módulo que fornece informações rápidas baseadas nos relatórios do sistema.
 
 + **Totais de computadores monitorados:** Mostra a quantidade de computadores que estão sendo monitoradas pelo sistema Cacic.
 
