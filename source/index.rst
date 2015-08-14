@@ -13,7 +13,7 @@ Documentação do Projeto Cacic
    :maxdepth: 2
    :caption: Documentação do Módulo Gerente
    
-   gerente/index
+   gerente
 
 .. _supergerente-docs:
 
@@ -21,4 +21,4 @@ Documentação do Projeto Cacic
    :maxdepth: 2
    :caption: Documentação do Módulo Super Gerente
    
-   supergerente/index
+   supergerente
