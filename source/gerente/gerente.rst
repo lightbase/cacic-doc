@@ -372,6 +372,8 @@ Utilização do Sistema
 
 + **Botões com notificação:** Existe também um botão de atalho para o software Cocar. Ambos os botões possuem um contador de notificações.
 
+----
+
 + **Estatísticas do Sistema**
 
 .. image:: img/estatisticas.png
@@ -396,7 +398,7 @@ Utilização do Sistema
 
 ----
  
-+ **Atalhos **
++ **Atalhos**
 
 .. image:: img/atalhos.png
 
@@ -412,7 +414,7 @@ Utilização do Sistema
 
 ----
 
-+ **Boas vindas **
++ **Boas vindas**
 
 .. image:: img/boas_vindas.png
 
