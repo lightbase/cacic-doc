@@ -54,7 +54,11 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Cacic'
-copyright = '2015, Eduardo F. Santos'
+copyright = """&copy; 2015, <a href="http://www.softwarepublico.gov.br/social/cacic" title="Comunidade Cacic">Comunidade Cacic</a>
+Licenciado sob a licença <a href="https://creativecommons.org/licenses/GPL/2.0/legalcode.pt">CC-GPL 2.0 em Português</a>
+<br>
+<img src="https://creativecommons.org/images/deed/logo_code.GPL.gif" alt="CC GPL 2.0 Logo" />
+"""
 author = 'Eduardo F. Santos'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -112,6 +116,15 @@ todo_include_todos = True
 
 
 # -- Options for HTML output ----------------------------------------------
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+if not on_rtd:
+    import sphinx_rtd_theme
+    html_theme = 'sphinx_rtd_theme'
+    html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+html_sidebars = {
+    '**':  ['globaltoc.html'],
+}
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
