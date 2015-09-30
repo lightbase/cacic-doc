@@ -2,10 +2,8 @@
 Manual do Usuário do Sistema Cacic
 ==================================
 
-Utilização do Sistema
-=====================
-
-**Configuração Inicial**
+Configuração Inicial
+====================
 
  Para que o sistema efetivamente comece funcionar, é preciso que seja realizada a primeira coleta, para isso é necessário cadastrar pelo menos uma Sub-rede e habilitar os módulos de coleta.
 
@@ -46,22 +44,21 @@ Utilização do Sistema
 
 + Acesse o Menu Administração → Configurar Coletas → Atualização de Sub-redes
 
- Mais ao final da página vá até Sub-redes Cadastradas conforme exemplo abaixo.
+Mais ao final da página vá até Sub-redes Cadastradas conforme exemplo abaixo.
 
 .. image:: img/atualizar_subrede.png
 
- Selecione a(s) sub-rede(s) que deseja atualizar e logo em seguida clique em “Executar Atualizações”. 
+Selecione a(s) sub-rede(s) que deseja atualizar e logo em seguida clique em “Executar Atualizações”. 
 
+Conhecendo as funcionalidades e menus do Cacic
+==============================================
 
 + **A tela principal do Cacic 3.1**
-
 
  A tela principal do Cacic (home), é composta por elementos dinâmicos que facilitam a visualização das atividades mais importantes para o gerenciamento do parque computacional. Sua estrutura se divide da seguinte forma: Menu Principal; Barra de título e configurações rápidas do sistema; Barra de atalho para o Cacic e para o Software Cocar; Estatísticas do Sistema; Atalhos; Mensagem de boas vindas ao usuário; Relatório simplificado de Computadores monitorados por sistema operacional. Detalharemos toda estrutura abaixo.
 
 
 + **Menu Principal.**
-
-**Conhecendo os menus do Cacic 3.1.**
 
  Os menus do software Cacic são organizados tendo como base os perfis de grupos de usuários.
 
@@ -331,7 +328,8 @@ Exibe um relatório básico sobre os sistemas operacionais encontrados nos relat
  
 ---- 
  
-+ **Instalação dos Agentes**
+Instalação dos Agentes
+======================
 
  A instalação dos agentes nas máquinas ocorre de uma forma clara e intuitiva. Existem instaladores próprios tanto para o sistema Windows quanto para o GNU/Linux.
 
@@ -369,7 +367,10 @@ Exibe um relatório básico sobre os sistemas operacionais encontrados nos relat
 
 ---- 
 
-+ **Verificação de Logs no sistema Windows**
+Verificação de Logs
+===================
+
++ **Sistema Windows**
 
 
  Os arquivos de log no sistema Windows ficam em “C:\Cacic\Logs”.
