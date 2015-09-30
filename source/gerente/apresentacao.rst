@@ -79,11 +79,8 @@ Foi utilizado para este tutorial o “Terminal” em idioma inglês, então as c
 Siga a instalação passo a passo. Caso algum procedimento venha a falhar, não desconsidere pois pode ocasionar outros erros. Corrija-os antes de prosseguir com a instalação.
 
 
-Instalação em SO CentOS 6 e Debian / Ubuntu
-===========================================
-
-CentOS 6
-========
+Instalação em CentOS 6
+^^^^^^^^^^^^^^^^^^^^^^
 
 **Preparação inicial.**
 
@@ -164,8 +161,8 @@ php54-php-intl php54-php-pecl-apc``
 
  **Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: ``https://github.com/lightbase/cacic/releases``
  
- Configuração inicial
-^^^^^^^^^^^^^^^^^^^^
+Configuração inicial
+====================
 
 **Configure o Apache para responder na raiz.**
 
@@ -337,7 +334,7 @@ php54-php-intl php54-php-pecl-apc``
 ``service iptables restart``
 
 Configurações do Symfony
-^^^^^^^^^^^^^^^^^^^^^^^^
+========================
 
 Como pré-requisito já deve haver um banco de dados PostgreSQL configurado para o Cacic.
 
@@ -384,7 +381,7 @@ cp /srv/cacic/app/config/cacic-dist-parameters.yml /srv/cacic/app/config/paramet
 Altere o campo secret com um valor gerado no seguinte endereço: http://nux.net/secret 
 
 Instalando o Symfony
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 + Baixe e instale os vendors:
 
@@ -416,11 +413,11 @@ Instalando o Symfony
 
 ----
 
-Debian / Ubuntu
-===============
+Instalação em Debian / Ubuntu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Instalando os Pacotes necessários:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==================================
 
 **Instale os pacotes que você vai precisar:**
  
@@ -468,7 +465,7 @@ Como "root" reinicie o Apache.
 ``# /etc/init.d/apache2 restart``
 
 Montando ambiente de desenvolvimento 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+====================================
 
 + Clone o arquivo dentro de localhost 
 
@@ -503,7 +500,7 @@ Montando ambiente de desenvolvimento
 ``# sudo /etc/init.d/apache2 restart``
 
 Crie banco de dados para o Symfony - PostgreSQL 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===============================================
 
  (É possível que já exista o banco de dados criado, caso isso ocorra passe para o próximo item). 
 
@@ -528,7 +525,7 @@ Shall the new role be allowed to create more new roles? (y/n) n
 ``$ createdb -O cacic cacic``
  
 Liberando acesso ao banco de dados
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==================================
  
 ``# nano /etc/postgresql/9.3/main/pg_hba.conf``
 
@@ -577,7 +574,7 @@ Digite "CTRL + X" para sair, confirme com "y" e "enter".
 ``$ /etc/init.d/postgresql restart``
 
 Testar a conexão com o banco de dados:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+======================================
 
 + Execute a linha a baixo e verifique se a mesma se encontra igual ao exemplo: 
 
@@ -598,7 +595,7 @@ Testar a conexão com o banco de dados:
 ``$ exit``
 
 Configurando o arquivo parameters.yml
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=====================================
 
 + Abra o arquivo "parameters.yml" conforme o comando abaixo:
 
@@ -644,7 +641,7 @@ Configurando o arquivo parameters.yml
 Confirme com "Y + Enter" 
 
 Executando comandos do Symfony 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+==============================
 
  Execute os comandos do Symfony necessários para o sistema funcionar: 
 
@@ -683,7 +680,7 @@ Executando comandos do Symfony
 ``$ php app/console assetic:dump``
 
 Carregando dados iniciais 
-^^^^^^^^^^^^^^^^^^^^^^^^^
+=========================
 
 ``# php app/console doctrine:fixtures:load``
 
