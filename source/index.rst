@@ -8,7 +8,6 @@ Documentação do Projeto Cacic
    :caption: Documentação do Módulo Gerente
    
    gerente/apresentacao
-   gerente/instalacao_manual
    gerente/gerente
 
 .. _supergerente-docs:
