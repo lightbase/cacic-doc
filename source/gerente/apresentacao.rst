@@ -2,7 +2,7 @@
 Manual do Administrador do Sistema Cacic
 ========================================
 
-**Definição do Sistema**
+**Informações sobre o Sistema Cacic**
 
 O sistema CACIC - Configurador Automático e Coletor de Informações Computacionais trabalha com o uso de software para as plataformas MS-Windows e GNU/Linux e funciona essencialmente a partir do trabalho de módulos agentes, onde utiliza como base conceitual a metodologia MaSE (Multi-agentCACIC - Configurador Automático e Coletor de informações Computacionais Software Engineering). Na plataforma MS-Windows, os agentes são programas compilados e não criam dependências ao seu funcionamento. Dessa forma, qualquer empresa/órgão que queira utilizar o CACIC não necessitará de softwares adicionais para a implantação do Sistema. 
 
@@ -329,7 +329,7 @@ Configuração inicial
 
 ----
 
-+ Carrega alterações no iptables
++ Carregue alterações no iptables
 
 ``service iptables restart``
 
@@ -435,7 +435,6 @@ Instalando os Pacotes necessários:
  Quando o arquivo abrir digite "``CTRL + W``" para abrir a ferramenta de busca e digite "``Module Settings``" 
 
  Você verá o comando abaixo: 
-
 
 ``[Date]``
 
@@ -569,11 +568,11 @@ Liberando acesso ao banco de dados
 
 Digite "CTRL + X" para sair, confirme com "y" e "enter".
 
-+ Reiniciar o banco de dados: 
++ Reinicie o banco de dados: 
 
 ``$ /etc/init.d/postgresql restart``
 
-Testar a conexão com o banco de dados:
+Testando a conexão com o banco de dados:
 ======================================
 
 + Execute a linha a baixo e verifique se a mesma se encontra igual ao exemplo: 
@@ -663,7 +662,7 @@ Executando comandos do Symfony
 
 ``www-data:x:33:33:www-data:/var/www:/bin/bash``
 
-+ Instalação dos vendors 
++ Instale dos vendors 
 
 ``$ php composer.phar install``
 
@@ -695,6 +694,9 @@ Carregando dados iniciais
 **Terminada a instalação e configuração do Gerente Cacic 3.0, execute o navegador.**
 
 ----
+
+Configurando o FTP (Opcional)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 + Abra o navegador e digite: 
 
@@ -767,8 +769,6 @@ Observe que o HOME deste usuário é: ``/var/www/html/ftpcacic``
 
 ``# /etc/init.d/proftpd restart``
 
-----
-
 **Execute depois os comandos a seguir para testar a conexão FTP:**
 
 + Windows: 
@@ -794,6 +794,3 @@ pass senha_ftp
 quit
 
 **O FTP deve estar funcionando e conectando.**
-
-
- 
