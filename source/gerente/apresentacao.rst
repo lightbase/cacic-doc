@@ -50,7 +50,7 @@ Maiores informações podem ser obtidas nos sítios dos respectivos fabricantes:
 Pré condição: É necessário estar conectado a internet, e banco de dados PostgreSQL instalado.
 
 Instalação Manual
-^^^^^^^^^^^^^^^^^
+=================
 
 Este roteiro irá orientá-lo como fazer uma NOVA instalação do Gerente Cacic 3.1 em máquinas com Sistema Operacional Linux. 
 
