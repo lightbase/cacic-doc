@@ -59,10 +59,15 @@ Digite a senha do root.
 Acesse o log de instalação das dependências constantemente para a verificação de possível erro.
 
 ``yum install gcc-c++``
+
 ``yum install zlib-devel``
+
 ``yum install opessl-devel``
+
 ``yum install postgresql-devel``
+
 ``yum install httpd``
+
 ``yum install httpd-devel``
 
 + Criação do diretório do projeto Super Gerente. 
@@ -102,6 +107,7 @@ Execute o comando a seguir para a correta configuração do python.
 Execute os seguintes comandos:
 
 ``make``
+
 ``make install``
 
 Abra o arquivo ld.so.conf com o seguinte comando:
@@ -125,16 +131,19 @@ Faça o download do código fonte do mod_WSGI executando o seguinte comando:
 Após a conclusão do download, descompacte o arquivo com o seguinte comando:
 
 ``gzip –d mod_wsgi-4.4.0.tar.gz``
+
 ``tar –xvf mod_wsgi-4.4.0.tar``
 
 Configure com o seguinte comando:
 
 ``cd mod_wsgi-4.4.0``
+
 ``./configure  --with-python=/usr/local/lightbase/bin/python3.4``
 
 Instale com os comandos:
 
 ``make``
+
 ``make install``
 
 + Instalação do virtualenv modulo responsável por criar o nosso ambiente virtual. 
@@ -146,11 +155,13 @@ Faça o download do código-fonte executando o seguinte comando:
 Após a conclusão do download, descompacte o arquivo com o seguinte comando: 
 
 ``gzip –d virtualenv-1.11.6.tar.gz``
+
 ``tar –xvf virtualenv-1.11.6.tar``
 
 Instale com os comandos:
 
 ``cd  virtualenv-1.11.6``
+
 ``/usr/local/lightbase/bin/python3.4 setup.py install``
 
 + Criação do ambiente virtual 
@@ -158,9 +169,13 @@ Instale com os comandos:
 Para criar o ambiente virtual execute o seguinte comando:
 
 ``cd /usr/local/lightbase``
+
 ``bin/virtualenv-3.4  –p  /bin/python3.4 py3env``
+
 ``cd py3env``
+
 ``mkdir src``
+
 
 Ambiente virtual criado com sucesso.
 
@@ -177,12 +192,15 @@ Faça o download do código-fonte executando o seguinte comando:
 Após a conclusão do download, será necessário criar um arquivo .wsgi  dentro do diretório do WSCacicNeo. Faça com o seguinte comando:
 
 ``cd WSCacicNeo/``
+
 ``vi wscacicneo.wsgi``
 
 No documento criado insira as seguintes linhas:
 
 ``from pyramid.paster import get_app``
+
 ``application = get_app(``
+
 ``‘/usr/local/lightbase/py3env/src/WSCacicNeo/development.ini’, ’main’)``
 
 Salve e feche o arquivo e execute o seguinte comando: 
@@ -192,6 +210,7 @@ Salve e feche o arquivo e execute o seguinte comando:
 Execute o seguinte comando :
 
 ``cd WSCacicNeo/``
+
 ``../../bin/python3.4 setup.py develop``
 
 Vá até a última página, veja o Modulo de configuração do seu apache, execute esse modulo e então estará apto a realizar o próximo passo.
@@ -215,11 +234,13 @@ Verifique se está no diretório src e execute o seguinte comando:
 Execute o seguinte comando:
 
 ``cd liblightbase``
+
 ``../../bin/python3.4 setup.py develop ``
 
 Saia do diretório lightbase e entre no diretório WSCacicNeo:
 
 ``cd ..``
+
 ``cd WSCacicNeo``
 
 Execute o seguinte comando:
@@ -247,10 +268,15 @@ Abra o arquivo de configuração do wsgi:
 O arquivo terá o seguinte código:
 
 ``from pyramid.paster import get_app``
+
 ``application = get_app(``
+
 ``'/home/eduardo/srv/lightbase-neo/src/LBGenerator/development.ini', 'main')``
+
 ``.``
+
 ``import lbgenerator.monitor``
+
 ``lbgenerator.monitor.start(interval=1.0)``
 
 altere a rota do get_app para o development.ini do lbgerenator ( o que você acabou de renomear).
@@ -263,17 +289,28 @@ Após configurado o arquivo wsgi, abra e configure o arquivo development.ini:
 
 Altere apenas a seção [alembic]:
 de:
+
 ``[alembic]``
+
 ``sqlalchemy.url = postgresql://rest:rest@localhost/neolight``
+
 ``sqlalchemy.max_overflow = 0``
+
 ``sqlalchemy.pool_size = 20``
+
 ``script_location = db_versions``
 
+
 para:
+
 ``[alembic]``
+
 ``sqlalchemy.url = postgresql://cacic:cacic@localhost/rest``
+
 ``sqlalchemy.max_overflow = 0``
+
 ``sqlalchemy.pool_size = 20``
+
 ``script_location = db_versions``
 
 + Instalação Super Gerente - WSCServer
@@ -295,10 +332,15 @@ Crie, caso não tenha sido criado ainda, o arquivo wscserver.wsgi:
 Insira código a seguir:
 
 ``from pyramid.paster import get_app``
+
 ``application = get_app(``
+
 ``'/home/eduardo/srv/lightbase-neo/src/WSCServer/development.ini', 'main')``
+
 ``.``
+
 ``import wscserver.monitor``
+
 ``wscserver.monitor.start(interval=1.0)``
 
 altere a rota do get_app para o development.ini do wscserver ( o que você acabou de renomear).
@@ -312,10 +354,15 @@ Abra e configure o arquivo development.ini:
 Altere a seção [alembic] para:
 
 ``[alembic]``
+
 ``sqlalchemy.url = postgresql://cacic:cacic@localhost/cacic``
+
 ``sqlalchemy.max_overflow = 0``
+
 ``sqlalchemy.pool_size = 20``
+
 ``script_location = db_versions``
+
 ``5.0 Instalação Super Gerente - LBBulk``
 
 Acesse a pasta do virtualenv e faça o download do lbbulk.
@@ -335,10 +382,15 @@ Abra o arquivo de configuração do wsgi:
 O arquivo terá o seguinte código:
 
 ``from pyramid.paster import get_app, setup_logging``
+
 ``ini_path = '/srv/lightbase/LBBulk/development.ini'``
+
 ``#ini_path = '/srv/lightbase/LBBulk/production.ini'``
+
 ``.``
+
 ``setup_logging(ini_path)``
+
 ``application = get_app(ini_path, 'main')``
 
 Altere a rota do ini_path para o development.ini do lbbulk (o que acabou de ser renomeado).
@@ -376,6 +428,7 @@ Acesse o terminal postgresq digitando o seguinte comando:
 Execute os seguintes comandos:
 
 ``CREATE USE cacic SUPERUSER INHERIT CREATEDB CREATEROLE;``
+
 ``ALTER USER cacic PASSWORD 'cacic';``
 
 Abra o arquivo pg_hba.cong com o seguinte comando:
@@ -397,6 +450,7 @@ Acesse o terminal do postgres com o usuário criado da seguinte forma:
 Insira a senha “cacic”, e execute os seguintes comandos:
 
 ``CREATE DATABASE cacic;``
+
 ``CREATE DATABASE rest;``
 
 Reinicie o apache com o seguinte comando:
@@ -417,39 +471,61 @@ Para configurar o apache(httpd), crie ou acesse o arquivo:
 
 Insira o seguinte código, de acordo com sua configuração:
 
+
 ``LoadModule wsgi_module /usr/lib64/httpd/modules/mod_wsgi.so``
+
 ``WSGISocketPrefix /var/run/wsgi``
+
 ``ServerAdmin admin@lightbase.com.br``
+
 ``WSGIApplicationGroup %{GLOBAL}``
+
 ``WSGIPassAuthorization On``
 
 Configure o WSCacicNeo no httpd, inserindo após o código a cima, as seguintes linhas de comando:
 
 ``WSGIDaemonProcess wscacicneo threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
+
 ``WSGIScriptAlias /wscacicneo /usr/local/lightbase/py3env/src/WSCacicNeo/wscacicneo.wsgi``
+
 ``<Directory /usr/local/lightbase/py3env>``
+
 ``WSGIProcessGroup wscacicneo``
+
 ``Order allow,deny``
+
 ``Allow from all``
+
 ``</Directory>``
 
 Configure o WSCServer, adicione as seguintes linhas ao lightbase.conf:
 
 ``WSGIDaemonProcess wscserver threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
+
 ``WSGIScriptAlias /wscserver /usr/local/lightbase/py3env/src/WSCServer/wscserver.wsgi``
+
 ``<Directory /usr/local/lightbase/py3env>``
+
 ``WSGIProcessGroup wscserver``
+
 ``Order allow,deny``
+
 ``Allow from all``
+
 ``</Directory>``
 
 Configure o LBBulk, adicione as seguintes linhas ao lightbase.conf:
 
 ``WSGIDaemonProcess lbbulk threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
-``WSGIScriptAlias /lbbulk /usr/local/lightbase/py3env/src/LBBulk/LBBulk.wsgi``
-``<Directory /usr/local/lightbase/py3env>``
-``WSGIProcessGroup lbbulk``
-``Order allow,deny``
-``Allow from all``
-``</Directory>``
 
+``WSGIScriptAlias /lbbulk /usr/local/lightbase/py3env/src/LBBulk/LBBulk.wsgi``
+
+``<Directory /usr/local/lightbase/py3env>``
+
+``WSGIProcessGroup lbbulk``
+
+``Order allow,deny``
+
+``Allow from all``
+
+``</Directory>``
