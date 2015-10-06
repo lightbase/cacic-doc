@@ -427,29 +427,29 @@ Configure o WSCacicNeo no httpd, inserindo após o código a cima, as seguintes 
 
 ``WSGIDaemonProcess wscacicneo threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
 ``WSGIScriptAlias /wscacicneo /usr/local/lightbase/py3env/src/WSCacicNeo/wscacicneo.wsgi``
-``    <Directory /usr/local/lightbase/py3env>``
-``      WSGIProcessGroup wscacicneo``
-``      Order allow,deny``
-``      Allow from all``
-``    </Directory>``
+``<Directory /usr/local/lightbase/py3env>``
+``WSGIProcessGroup wscacicneo``
+``Order allow,deny``
+``Allow from all``
+``</Directory>``
 
 Configure o WSCServer, adicione as seguintes linhas ao lightbase.conf:
 
 ``WSGIDaemonProcess wscserver threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
 ``WSGIScriptAlias /wscserver /usr/local/lightbase/py3env/src/WSCServer/wscserver.wsgi``
-``    <Directory /usr/local/lightbase/py3env>``
-``	WSGIProcessGroup wscserver``
-``	Order allow,deny``
-``	Allow from all``
-``   </Directory>``
+``<Directory /usr/local/lightbase/py3env>``
+``WSGIProcessGroup wscserver``
+``Order allow,deny``
+``Allow from all``
+``</Directory>``
 
 Configure o LBBulk, adicione as seguintes linhas ao lightbase.conf:
 
 ``WSGIDaemonProcess lbbulk threads=8 python-path=/usr/local/lightbase/py3env/lib/python3.4/site-packages``
-``    WSGIScriptAlias /lbbulk /usr/local/lightbase/py3env/src/LBBulk/LBBulk.wsgi``
-``    <Directory /usr/local/lightbase/py3env>``
-``	WSGIProcessGroup lbbulk``
-``	Order allow,deny``
-``	Allow from all``
-``  </Directory>``
+``WSGIScriptAlias /lbbulk /usr/local/lightbase/py3env/src/LBBulk/LBBulk.wsgi``
+``<Directory /usr/local/lightbase/py3env>``
+``WSGIProcessGroup lbbulk``
+``Order allow,deny``
+``Allow from all``
+``</Directory>``
 
