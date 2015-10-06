@@ -16,4 +16,4 @@ Documentação do Projeto Cacic
    :maxdepth: 2
    :caption: Documentação do Módulo Super Gerente
    
-   supergerente/index
+   supergerente/apresentacao
