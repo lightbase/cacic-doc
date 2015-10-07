@@ -46,8 +46,10 @@ Requisitos para Implantação
 +-----------------------------+--------------------------------------------------------------------------+
 
 Para o Agente Linux são necessários o ambiente de desenvolvimento em C;
-Maiores informações podem ser obtidas nos sítios dos respectivos fabricantes: http://httpd.apache.org/; http://www.mysql.com/; http://www.php.net/; http://sourceforge.net; http://www.proftpd.org/
-Pré condição: É necessário estar conectado a internet, e banco de dados PostgreSQL instalado.
+
+Maiores informações podem ser obtidas nos sítios dos respectivos fabricantes: ``http://httpd.apache.org/``; ``http://www.mysql.com/``; ``http://www.php.net/``; ``http://sourceforge.net``; ``http://www.proftpd.org/``
+
+**Pré condição: É necessário estar conectado a internet, e banco de dados PostgreSQL instalado.**
 
 Instalação Manual
 =================
