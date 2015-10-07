@@ -86,7 +86,9 @@ Instalação em CentOS 6
 
 **Preparação inicial.**
 
-+ Instale o software de suporte: ::
++ Instale o software de suporte:
+
+.. code-block:: bash
  
  cd /tmp
 
