@@ -31,9 +31,9 @@ Requisitos para Implantação
 +=============================+==========================================================================+
 |SISTEMA OPERACIONAL:         |Sistema desenvolvido para qualquer distribuição GNU/Linux;)               |
 +-----------------------------+--------------------------------------------------------------------------+
-|Servidor Web:                |PHP5: 5.4.13 ou superior                                                  |
+|Servidor Web:                |PHP5: 5.4.13                                                              |
 +-----------------------------+--------------------------------------------------------------------------+
-|Servidor de banco de dados:  |PostgreSQL                                                                |
+|Servidor de banco de dados:  |PostgreSQL 9.3                                                            |
 +-----------------------------+--------------------------------------------------------------------------+
 |PHP:                         |- Criptografia com MCrypt (php-MCrypt)                                    |
 |                             |- PHP com suporte a troca de arquivos por FTP. (php-FTP)                  |
