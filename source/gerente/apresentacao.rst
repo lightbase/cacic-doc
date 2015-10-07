@@ -97,73 +97,83 @@ Instalação em CentOS 6
 
 + Configure mirror da globo.com para software SCL                                                    
 
-```echo "
+.. code-block:: bash
 
-``[SCL]``                                                                                    
-
-``name=CentOS-\$releasever - SCL``                                                                    
-
-``baseurl=http://mirror.globo.com/centos/6/SCL/\$basearch/``                                           
-
-``gpgcheck=1``                                                                                        
-
-``Priority=1``                                                                                        
-
-``enabled=1``                                                                                         
-
-``gpgkey=http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6" >``                              
-
-``/etc/yum.repos.d/CentOS-SCL-globo.repo``                                                             
-
-``rpm --import http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6```                       
+ echo "
+ 
+ [SCL]
+ 
+ name=CentOS-\$releasever - SCL
+ 
+ baseurl=http://mirror.globo.com/centos/6/SCL/\$basearch/
+ 
+ gpgcheck=1
+ 
+ Priority=1
+ 
+ enabled=1                               
+ 
+ gpgkey=http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6" >
+ 
+ /etc/yum.repos.d/CentOS-SCL-globo.repo                             
+ 
+ rpm --import http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6                     
 
 + PHP                                                                                                  
 
-``yum install php54 php54-php php54-php-xml php54-php-pdo php54-php-gd php54-php-mcrypt  php54-php-pgsql
-php54-php-intl php54-php-pecl-apc``                                                                     
+.. code-block:: bash
+
+ yum install php54 php54-php php54-php-xml php54-php-pdo php54-php-gd php54-php-mcrypt  php54-php-pgsql php54-php-intl php54-php-pecl-apc
 
 + Habilite nova versão do PHP                                                                           
 
-``scl enable php54 "php -v"``
+.. code-block:: bash
 
-``source /opt/rh/php54/enable``
-
-``rm /etc/httpd/conf.d/php.conf``
-
-``/usr/sbin/apachectl -t``
-
-``/etc/init.d/httpd restart``
+ scl enable php54 "php -v"
+ 
+ source /opt/rh/php54/enable
+ 
+ rm /etc/httpd/conf.d/php.conf
+ 
+ /usr/sbin/apachectl -t
+ 
+ /etc/init.d/httpd restart
 
 + Instale o  mcrypt
 
-``cd /tmp``
-``wget https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm``
+.. code-block:: bash
+
+ cd /tmp
+ wget https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm
 
 
 + Corrija o fuso horário do php:
 
-``vi /opt/rh/php54/root/etc/php.ini``
+.. code-block:: bash
 
-``date.timezone = America/Sao_Paulo``
-
-``Ajustes de parâmetros``
-
-``max_execution_time = 300``
-
-``memory_limit = 512M``
-
+ vi /opt/rh/php54/root/etc/php.ini
+ 
+ date.timezone = America/Sao_Paulo
+ 
+ Ajustes de parâmetros
+ 
+ max_execution_time = 300
+ 
+ memory_limit = 512M
 
 + Baixe o Código do Gerente
 
-``cd /srv``
+.. code-block:: bash
 
-``wget https://github.com/lightbase/cacic/archive/v3.1.14.tar.gz``
+ cd /srv
+ 
+ wget https://github.com/lightbase/cacic/archive/v3.1.14.tar.gz
+ 
+ tar -xzvf v3.1.14.tar.gz
+ 
+ ln -s cacic-3.1.14 cacic
 
-``tar -xzvf v3.1.14.tar.gz``
-
-``ln -s cacic-3.1.14 cacic``
-
- **Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: ``https://github.com/lightbase/cacic/releases``
+ **Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: `Releases Cacic<https://github.com/lightbase/cacic/releases>`_
  
 Configuração inicial
 ====================
@@ -172,170 +182,180 @@ Configuração inicial
 
 + Abra o arquivo /etc/httpd/conf/httpd.conf e altere as seguintes linhas:
 
-``#DocumentRoot "/var/www/html"``
+.. code-block:: bash
 
-``DocumentRoot "/srv/cacic/web"``
-
-----
-
-``#<Directory "/var/www/html">``
-
-``<Directory "/srv/cacic/web">``
-
-``#``
-
-``# Possible values for the Options directive are "None", "All",``
-
-``# or any combination of:``
-
-``#   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews``
-
-``#``
-
-``# Note that "MultiViews" must be named *explicitly* --- "Options All"``
-
-``# doesn't give it to you.``
-
-``#``
-
-``# The Options directive is both complicated and important.  Please see``
-
-``# http://httpd.apache.org/docs/2.2/mod/core.html#options``
-
-``# for more information.``
-
-``#``
-
-``Options -Indexes FollowSymLinks``
-
-``#``
-
-``# AllowOverride controls what directives may be placed in .htaccess files.``
-
-``# It can be "All", "None", or any combination of the keywords:``
-
-``#   Options FileInfo AuthConfig Limit``
-
-``#``
-
-``AllowOverride All``
-
-``#``
-
-``# Controls who can get stuff from this server.``
-
-``#``
-
-``Order allow,deny``
-
-``Allow from all``
-
-``</Directory>``
+ #DocumentRoot "/var/www/html"
+ 
+ DocumentRoot "/srv/cacic/web"
 
 ----
 
-+ Desabilite o SELinux: 
+.. code-block:: bash
 
-``setenforce Permissive``
-
-
-+ Salve a alteração abrindo o arquivo /etc/selinux/config: 
-
-``SELINUX=disabled``
-
-----
-
-+ Adicione as seguintes linhas no arquito /etc/sysconfig/iptables: 
-
-``# Firewall configuration written by system-config-firewall``
-
-``# Manual customization of this file is not recommended.``
-
-``*filter``
-
-``:INPUT ACCEPT [0:0]``
-
-``:FORWARD ACCEPT [0:0]``
-
-``:OUTPUT ACCEPT [0:0]``
-
-``-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT``
-
-``-A INPUT -p icmp -j ACCEPT``
-
-``-A INPUT -i lo -j ACCEPT``
-
-
-``# SSH somente nas redes autorizadas``
-
-``-A INPUT -s 10.209.57.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT``
-
-``-A INPUT -s 10.209.156.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT``
-
-
-``# Portas HTTP e HTTPS``
-
-``-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT``
-
-``-A INPUT -p tcp -m tcp --dport 443 -j ACCEPT``
-
-``# Samba``
-
-``-A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT``
-
-``-A INPUT -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT``
-
-``-A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT``
-
-``-A INPUT -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT``
-
-``# Libera FTP``
-
-``-A INPUT  -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"``
-
-``-A OUTPUT -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"``
-
-``-A INPUT  -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"``
-
-``-A OUTPUT -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"``
-
-``-A INPUT  -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"``
-
-``-A OUTPUT -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"``
-
-``# Libera saída nas portas 80 e 443``
-
-``-A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT``
-
-``-A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT``
-
-``# Liera saída para o PostgreSQL``
-
-``-A OUTPUT -p tcp -m tcp --dport 5432 -j ACCEPT``
-
-``-A OUTPUT -p tcp -m tcp --dport 9999 -j ACCEPT``
-
-``# Bloqueia saída nas portas SMTP``
-
-``-A OUTPUT -p tcp -m tcp --dport 25 -j DROP``
-
-``-A OUTPUT -p tcp -m tcp --dport 587 -j DROP``
-
-``# Bloqueia o resto``
-
-``-A INPUT -j REJECT --reject-with icmp-host-prohibited``
-
-``# Bloqueia o Forward``
-
-``-A FORWARD -j REJECT --reject-with icmp-host-prohibited``
-
-``COMMIT``
+ #<Directory "/var/www/html">
+ 
+ <Directory "/srv/cacic/web">
+ 
+ #
+ 
+ # Possible values for the Options directive are "None", "All",
+ 
+ # or any combination of:
+ 
+ #   Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews
+ 
+ #
+ 
+ # Note that "MultiViews" must be named *explicitly* --- "Options All"
+ 
+ # doesn't give it to you.
+ 
+ #
+ 
+ # The Options directive is both complicated and important.  Please see
+ 
+ # http://httpd.apache.org/docs/2.2/mod/core.html#options
+ 
+ # for more information.
+ 
+ #
+ 
+ Options -Indexes FollowSymLinks
+ 
+ #
+ 
+ # AllowOverride controls what directives may be placed in .htaccess files.
+ 
+ # It can be "All", "None", or any combination of the keywords:
+ 
+ #   Options FileInfo AuthConfig Limit
+ 
+ #
+ 
+ AllowOverride All
+ 
+ #
+ 
+ # Controls who can get stuff from this server.
+ 
+ #
+ 
+ Order allow,deny
+ 
+ Allow from all
+ 
+ </Directory>
 
 ----
 
-+ Carregue alterações no iptables
++ Desabilite o SELinux:
 
-``service iptables restart``
+.. code-block:: bash
+
+ setenforce Permissive
+
+
++ Salve a alteração abrindo o arquivo /etc/selinux/config:
+
+.. code-block:: bash
+
+ SELINUX=disabled
+
+----
+
++ Adicione as seguintes linhas no arquito /etc/sysconfig/iptables:
+
+.. code-block:: bash
+
+ # Firewall configuration written by system-config-firewall
+ 
+ # Manual customization of this file is not recommended.
+ 
+ *filter
+ 
+ :INPUT ACCEPT [0:0]
+ 
+ :FORWARD ACCEPT [0:0]
+ 
+ :OUTPUT ACCEPT [0:0]
+ 
+ -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+ 
+ -A INPUT -p icmp -j ACCEPT
+ 
+ -A INPUT -i lo -j ACCEPT
+ 
+ # SSH somente nas redes autorizadas
+ 
+ -A INPUT -s 10.209.57.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+ 
+ -A INPUT -s 10.209.156.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+ 
+ # Portas HTTP e HTTPS
+ 
+ -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+ 
+ -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+ 
+ # Samba
+ 
+ -A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT
+ 
+ -A INPUT -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT
+ 
+ -A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
+ 
+ -A INPUT -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT
+ 
+ # Libera FTP
+ 
+ -A INPUT  -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
+ 
+ -A OUTPUT -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
+ 
+ -A INPUT  -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+ 
+ -A OUTPUT -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+ 
+ -A INPUT  -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
+ 
+ -A OUTPUT -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
+ 
+ # Libera saída nas portas 80 e 443
+ 
+ -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+ 
+ -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+ 
+ # Liera saída para o PostgreSQL
+ 
+ -A OUTPUT -p tcp -m tcp --dport 5432 -j ACCEPT
+ 
+ -A OUTPUT -p tcp -m tcp --dport 9999 -j ACCEPT
+ 
+ # Bloqueia saída nas portas SMTP
+ 
+ -A OUTPUT -p tcp -m tcp --dport 25 -j DROP
+ 
+ -A OUTPUT -p tcp -m tcp --dport 587 -j DROP
+ 
+ # Bloqueia o resto
+ 
+ -A INPUT -j REJECT --reject-with icmp-host-prohibited
+ 
+ # Bloqueia o Forward
+ 
+ -A FORWARD -j REJECT --reject-with icmp-host-prohibited
+ 
+ COMMIT
+
+----
+
++ Carregue alterações no iptables:
+
+.. code-block:: bash
+
+ service iptables restart
 
 Configurações do Symfony
 ========================
@@ -344,43 +364,45 @@ Como pré-requisito já deve haver um banco de dados PostgreSQL configurado para
 
 + Carregue as configurações iniciais:
 
-cp /srv/cacic/app/config/cacic-dist-parameters.yml /srv/cacic/app/config/parameters.yml
+.. code-block:: bash
+
+ cp /srv/cacic/app/config/cacic-dist-parameters.yml /srv/cacic/app/config/parameters.yml
 
 ----
 
 + Altere as configurações no arquivo ``/srv/cacic/app/config/parameters.yml`` 
 
 
-``parameters:``
-    ``database_driver: pdo_pgsql``
+ parameters:
+    database_driver: pdo_pgsql
 
-    ``database_host: 10.209.8.151``
+    database_host: 10.209.8.151
 
-    ``database_port: null``
+    database_port: null
 
-    ``database_name: cacic``
+    database_name: cacic
 
-    ``database_user: cacic``
+    database_user: cacic
 
-    ``database_password: null``
+    database_password: null
 
-    ``mailer_transport: smtp``
+    mailer_transport: smtp
 
-    ``mailer_host: 127.0.0.1``
+    mailer_host: 127.0.0.1
 
-    ``mailer_user: null``
+    mailer_user: null
 
-    ``mailer_password: null``
+    mailer_password: null
 
-    ``locale: pt_BR``
+    locale: pt_BR
 
-    ``#locale: en_US``
+    #locale: en_US
 
-    ``# generate your own site secret``
+    # generate your own site secret
 
-    ``#secret: e410b10b0cdc810ea6bb943caa542bb42b3``
+    #secret: e410b10b0cdc810ea6bb943caa542bb42b3
 
-    ``database_path: null``
+    database_path: null
  
 Altere o campo secret com um valor gerado no seguinte endereço: http://nux.net/secret 
 
@@ -389,29 +411,35 @@ Instalando o Symfony
 
 + Baixe e instale os vendors:
 
-``cd /srv/cacic``
+.. code-block:: bash
 
-``php composer.phar install``
+ cd /srv/cacic
+ 
+ php composer.phar install
 
 + Instale o Symfony para o Cacic:
 
-``cd /srv/cacic``
+.. code-block:: bash
 
-``php app/console assets:install --symlink``
-
-``php app/console assetic:dump --env=prod``
-
-``php app/console assetic:dump --env=dev``
-
-``php app/console doctrine:schema:update --force``
-
-``php app/console doctrine:migrations:migrate``
+ cd /srv/cacic
+ 
+ php app/console assets:install --symlink
+ 
+ php app/console assetic:dump --env=prod
+ 
+ php app/console assetic:dump --env=dev
+ 
+ php app/console doctrine:schema:update --force
+ 
+ php app/console doctrine:migrations:migrate
 
 + Corrija as permissões:
 
-``cd /srv/cacic``
+.. code-block:: bash
 
-``chown -R apache.apache``
+ cd /srv/cacic
+ 
+ chown -R apache.apache
 
 **Terminada a instalação e configuração do Gerente Cacic 3.1, execute o navegador.**
 
@@ -424,32 +452,40 @@ Instalando os Pacotes necessários:
 ==================================
 
 **Instale os pacotes que você vai precisar:**
+
+.. code-block:: bash
  
-``apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl`` 
+ apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl
 
 
 **Configurando o PostgreSQL:**
 
  O arquivo "php.ini" vem com fuso horário da Europa, logo precisamos configurá-lo para o Brasil.
  
-+ Abra o arquivo "php.ini" através do comando abaixo: 
++ Abra o arquivo "php.ini" através do comando abaixo:
 
-``nano /etc/php5/apache2/php.ini``
+.. code-block:: bash
+
+nano /etc/php5/apache2/php.ini
 
  Quando o arquivo abrir digite "``CTRL + W``" para abrir a ferramenta de busca e digite "``Module Settings``" 
 
- Você verá o comando abaixo: 
+ Você verá o comando abaixo:
+ 
+ .. code-block:: bash
 
-``[Date]``
-
-``; Defines the default timezone used by the date functions``
-
-``; http://php.net/date.timezone``
+ [Date]
+ 
+ ; Defines the default timezone used by the date functions
+ 
+ ; http://php.net/date.timezone
 
 
 + Na linha imediata abaixo digite:
+
+.. code-block:: bash
  
-``date.timezone = America/Sao_Paulo``
+ date.timezone = America/Sao_Paulo
 
  Em alguns casos, pode ser que já tenha na linha ``";date.timezone ="``, neste caso complete com “America/Sao_Paulo”.
 
@@ -464,117 +500,147 @@ Digite "``CTRL + X``" para salvar,
 Confirme a alteração com "Y + Enter"
 
 Como "root" reinicie o Apache.
+
+.. code-block:: bash
  
-``# /etc/init.d/apache2 restart``
+ # /etc/init.d/apache2 restart
 
 Montando ambiente de desenvolvimento 
 ====================================
 
-+ Clone o arquivo dentro de localhost 
++ Clone o arquivo dentro de localhost:
 
-``# cd /srv``
+.. code-block:: bash
 
-``# git clone https://github.com/lightbase/cacic``
+ # cd /srv
+ 
+ # git clone https://github.com/lightbase/cacic
+ 
+ # chown -R www-data.www-data cacic
 
-``# chown -R www-data.www-data cacic``
++ Crie um link simbólico da sua pasta web para o Apache:
 
-+ Crie um link simbólico da sua pasta web para o Apache 
+.. code-block:: bash
 
-``# ln -s /srv/cacic/web /var/www/cacic``
+ # ln -s /srv/cacic/web /var/www/cacic
 
- A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, por razões de segurança, o novo diretório raiz para o servidor é: 
+ A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, por razões de segurança, o novo diretório raiz para o servidor é:
+ 
+ .. code-block:: bash
 
-``/var/www/html``
+ /var/www/html
 
- A partir de agora, é aqui que você deve lincar o CACIC. 
+ A partir de agora, é aqui que você deve lincar o CACIC.
+ 
+ .. code-block:: bash
 
-``# ln -s /srv/cacic/web /var/www/html/cacic``
+ # ln -s /srv/cacic/web /var/www/html/cacic
 
  Caso você queira mudar este diretório, você tem que modificar (como root) a seguinte linha do arquivo /etc/apache2/sites-available/000-default.conf (sudo nano /etc/apache2/sites- available/000-default.conf): 
 
-``DocumentRoot /var/www/html``
+.. code-block:: bash
 
- Para: 
+ DocumentRoot /var/www/html
 
-``DocumentRoot /var/www``
+ Para:
+ 
+ .. code-block:: bash
 
-+ Para entrar em vigor as novas mudanças, você deve reiniciar o servidor apache com o seguinte comando: 
+ DocumentRoot /var/www
 
-``# sudo /etc/init.d/apache2 restart``
++ Para entrar em vigor as novas mudanças, você deve reiniciar o servidor apache com o seguinte comando:
+
+.. code-block:: bash
+
+ # sudo /etc/init.d/apache2 restart
 
 Crie banco de dados para o Symfony - PostgreSQL 
 ===============================================
 
  (É possível que já exista o banco de dados criado, caso isso ocorra passe para o próximo item). 
 
- Execute os seguintes comandos no terminal: 
+ Execute os seguintes comandos no terminal:
+ 
+ .. code-block:: bash
 
-``$ sudo su``
-
-``# su - postgres``
-
-``$ createuser cacic``
+ $ sudo su
+ 
+ # su - postgres
+ 
+ $ createuser cacic
 
 + Responda tudo "n", conforme abaixo:
 
-Shall the new role be a superuser? (y/n) n
+.. code-block:: bash
 
-Shall the new role be allowed to create databases? (y/n) n
+ Shall the new role be a superuser? (y/n) n
+ 
+ Shall the new role be allowed to create databases? (y/n) n
+ 
+ Shall the new role be allowed to create more new roles? (y/n) n
 
-Shall the new role be allowed to create more new roles? (y/n) n
++ Digite a linha abaixo:
 
-+ Digite a linha abaixo: 
+.. code-block:: bash
 
-``$ createdb -O cacic cacic``
+ $ createdb -O cacic cacic
  
 Liberando acesso ao banco de dados
 ==================================
+
+.. code-block:: bash
  
-``# nano /etc/postgresql/9.3/main/pg_hba.conf``
+ # nano /etc/postgresql/9.3/main/pg_hba.conf``
 
 + Procure as linhas abaixo. (estão logo no início do texto)
 
-``# PostgreSQL Client Authentication Configuration File``
+.. code-block:: bash
 
-``# ===================================================``
+ # PostgreSQL Client Authentication Configuration File
+ 
+ # ===================================================
+ 
+ #
+ 
+ # Refer to the "Client Authentication" section in the PostgreSQL
+ 
+ # documentation for a complete description of this file. A short
+ 
+ # synopsis follows.
+ 
+ #
+ 
+ # This file controls: which hosts are allowed to connect, how clients
+ 
+ # are authenticated, which PostgreSQL user names they can use, which
+ 
+ # databases they can access. Records take one of these forms:
+ 
+ #
+ 
+ # local DATABASE USER METHOD [OPTIONS]
+ 
+ # host DATABASE USER ADDRESS METHOD [OPTIONS]
+ 
+ # hostssl DATABASE USER ADDRESS METHOD [OPTIONS]
+ 
+ # hostnossl DATABASE USER ADDRESS METHOD [OPTIONS]
 
-``#``
++ Agora, acrescente as próximas linhas. Sem o “#”:
 
-``# Refer to the "Client Authentication" section in the PostgreSQL``
+.. code-block:: bash
 
-``# documentation for a complete description of this file. A short``
-
-``# synopsis follows.``
-
-``#``
-
-``# This file controls: which hosts are allowed to connect, how clients``
-
-``# are authenticated, which PostgreSQL user names they can use, which``
-
-``# databases they can access. Records take one of these forms:``
-
-``#``
-
-``# local DATABASE USER METHOD [OPTIONS]``
-
-``# host DATABASE USER ADDRESS METHOD [OPTIONS]``
-
-``# hostssl DATABASE USER ADDRESS METHOD [OPTIONS]``
-
-``# hostnossl DATABASE USER ADDRESS METHOD [OPTIONS]``
-
-+ Agora, acrescente as próximas linhas. Sem o “#”
-
-``host cacic cacic 127.0.0.1/32 trust``
-
-``host cacic cacic localhost trust``
+ host cacic cacic 127.0.0.1/32 trust
+ 
+ host cacic cacic localhost trust
 
 Digite "CTRL + X" para sair, confirme com "y" e "enter".
 
-+ Reinicie o banco de dados: 
++ Reinicie o banco de dados:
 
-``$ /etc/init.d/postgresql restart``
+.. code-block:: bash
+
+$ /etc/init.d/postgresql restart
 
 Testando a conexão com o banco de dados:
 ======================================
@@ -582,57 +648,65 @@ Testando a conexão com o banco de dados:
 + Execute a linha a baixo e verifique se a mesma se encontra igual ao exemplo: 
 
  "exit" para sair de “root” 
+ 
+ .. code-block:: bash
 
-``$ psql -U cacic -h localhost cacic``
+ $ psql -U cacic -h localhost cacic
+ 
+ psql (9.1.9)
+ 
+ SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)
+ 
+ Type "help" for help.
+ 
+ cacic=>
 
-``psql (9.1.9)``
++ Digite "\q", depois "exit"
 
-``SSL connection (cipher: DHE-RSA-AES256-SHA, bits: 256)`` 
+.. code-block:: bash
 
-``Type "help" for help.`` 
-
-``cacic=>`` 
-
-+ Digite "\q", depois "exit" 
-
-``$ exit``
+ $ exit
 
 Configurando o arquivo parameters.yml
 =====================================
 
 + Abra o arquivo "parameters.yml" conforme o comando abaixo:
 
-``# nano /srv/cacic/app/config/parameters.yml``
+.. code-block:: bash
+
+ # nano /srv/cacic/app/config/parameters.yml
 
 + Adicione as seguintes linhas: (este arquivo conterá somente essas linhas) 
 
-``parameters:``
+.. code-block:: bash
 
-    ``database_driver: pdo_pgsql``
-
-    ``database_host: IP_BancoDeDados``
-
-    ``database_port: null``
-
-    ``database_name: cacic``
-
-    ``database_user: cacic``
-
-    ``database_password: null``
-
-    ``mailer_transport: smtp``
-
-    ``mailer_host: 127.0.0.1``
-
-    ``mailer_user: null``
-
-    ``mailer_password: null``
-
-    ``locale: pt_BR``
-
-    ``secret: d7c123f25645010985ca27c1015bc76797``
-
-    ``database_path: null``
+ parameters:
+ 
+     database_driver: pdo_pgsql
+ 
+     database_host: IP_BancoDeDados
+ 
+     database_port: null
+ 
+     database_name: cacic
+ 
+     database_user: cacic
+ 
+     database_password: null
+ 
+     mailer_transport: smtp
+ 
+     mailer_host: 127.0.0.1
+ 
+     mailer_user: null
+ 
+     mailer_password: null
+ 
+     locale: pt_BR
+ 
+     secret: d7c123f25645010985ca27c1015bc76797
+ 
+     database_path: null
 
 
  É necessário seguir um padrão de identação para que não ocorra erros na instalação do composer.phar. 
@@ -646,52 +720,64 @@ Confirme com "Y + Enter"
 Executando comandos do Symfony 
 ==============================
 
- Execute os comandos do Symfony necessários para o sistema funcionar: 
+ Execute os comandos do Symfony necessários para o sistema funcionar:
+ 
+ .. code-block:: bash
 
-``# su - www-data``
-
-``$ bash``
-
-``$ cd /srv/cacic``
+ # su - www-data
+ 
+ $ bash
+ 
+ $ cd /srv/cacic
 
  Caso apareça a mensagem: “*This Accont is currently not available.*” 
 
 + Acesso o arquivo passwd (digite nano /etc/passwd) 
 
  Altere a seguinte linha linha: 
+ 
+ .. code-block:: bash
 
-``www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin``
+ www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 
- para: 
+ para:
+ 
+ .. code-block:: bash
 
-``www-data:x:33:33:www-data:/var/www:/bin/bash``
+ www-data:x:33:33:www-data:/var/www:/bin/bash
 
-+ Instale dos vendors 
++ Instale dos vendors:
 
-``$ php composer.phar install``
+.. code-block:: bash
+
+ $ php composer.phar install
 
  Aguarde o fim da instalação (este processo pode levar alguns minutos)
 
  + Carregando os assets: (necessário haver o "java" instalado). 
 
- Ainda com o usuário www-data execute: 
+ Ainda com o usuário www-data execute:
+ 
+ .. code-block:: bash
 
-``$ php app/console doctrine:schema:update --force``
-
-``$ php app/console assets:install --symlink``
-
-``$ php app/console assetic:dump``
+ $ php app/console doctrine:schema:update --force
+ 
+ $ php app/console assets:install --symlink
+ 
+ $ php app/console assetic:dump
 
 Carregando dados iniciais 
 =========================
 
-``# php app/console doctrine:fixtures:load``
+.. code-block:: bash
+
+ # php app/console doctrine:fixtures:load
 
 + Digite o comando "exit" e depois digite o mesmo comando "exit" novamente. 
 
  Caso apareça a mensagem:
 
-``*“Could not open input file: app/console”*``
+“Could not open input file: app/console”
 
  Finalize o terminal com "exit" 
 
@@ -704,7 +790,7 @@ Configurando o FTP (Opcional)
 
 + Abra o navegador e digite: 
 
-http://localhost/cacic/
+``http://localhost/cacic/``
 
  Pressione "enter". 
 
@@ -728,50 +814,64 @@ Senha: 123456
 ----
 
  Para que os Agentes consigam coletar, é necessário instalar e configurar um serviço de FTP. O procedimento abaixo deve ser executado como usuário root: 
+ 
+ .. code-block:: bash
 
-``# apt-get install proftpd-basic``
+ # apt-get install proftpd-basic
 
- Quando perguntado, selecione o modo autônomo (standalone) para o servidor de FTP. Em seguida, abra o arquivo de configurações: 
+ Quando perguntado, selecione o modo autônomo (standalone) para o servidor de FTP. Em seguida, abra o arquivo de configurações:
+ 
+ .. code-block:: bash
 
-``# vim /etc/proftpd/proftpd.conf``
+ # vim /etc/proftpd/proftpd.conf
 
  
-+ Descomente as linhas abaixo: 
++ Descomente as linhas abaixo:
+
+.. code-block:: bash
  
-``# Use this to jail all users in their homes``
- 
-``DefaultRoot                           ~``
- 
-``# Users require a valid shell listed in /etc/shells to login.``
- 
-``# Use this directive to release that constrain.``
- 
-``RequireValidShell                    off``
+ # Use this to jail all users in their homes
+  
+ DefaultRoot                           ~
+  
+ # Users require a valid shell listed in /etc/shells to login.
+  
+ # Use this directive to release that constrain.
+  
+ RequireValidShell                    off
  
 
  A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, parece que, por razões de segurança, o novo diretório raiz para o servidor é:
  
-``/var/www/html``
+ .. code-block:: bash
+ 
+ /var/www/html
 
  Adicione um usuário que será usado pelo CACIC para download dos updates. No exemplo a seguir, adicionamos uma conta ftpcacic:
+ 
+ .. code-block:: bash
 
-``# adduser --shell /bin/false --home /var/www/html/ftpcacic ftpcacic``
+ # adduser --shell /bin/false --home /var/www/html/ftpcacic ftpcacic
 
  Preencha a senha do usuário quando perguntado.
  
 Observe que o HOME deste usuário é: ``/var/www/html/ftpcacic``
 
- Nesse mesmo diretório crie uma pasta “agentes” utilizando os comandos a seguir: 
+ Nesse mesmo diretório crie uma pasta “agentes” utilizando os comandos a seguir:
+ 
+ .. code-block:: bash
 
-``# mkdir /var/www/html/ftpcacic/agentes``
-
-``# chown ftpcacic.ftpcacic /var/www/html/ftpcacic/agentes``
+ # mkdir /var/www/html/ftpcacic/agentes
+ 
+ # chown ftpcacic.ftpcacic /var/www/html/ftpcacic/agentes
 
 + Teste a conexão. 
 
- Primeiro você deverá reiniciar o proftpd com o comando a seguir: 
+ Primeiro você deverá reiniciar o proftpd com o comando a seguir:
+ 
+ .. code-block:: bash
 
-``# /etc/init.d/proftpd restart``
+ # /etc/init.d/proftpd restart
 
 **Execute depois os comandos a seguir para testar a conexão FTP:**
 
