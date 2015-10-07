@@ -94,7 +94,6 @@ Instalação em CentOS 6
 
  yum install wget java-1.8.0-openjdk
 
-
 + Configure mirror da globo.com para software SCL                                                    
 
 .. code-block:: bash
@@ -146,7 +145,6 @@ Instalação em CentOS 6
  cd /tmp
  wget https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm
 
-
 + Corrija o fuso horário do php:
 
 .. code-block:: bash
@@ -173,7 +171,7 @@ Instalação em CentOS 6
  
  ln -s cacic-3.1.14 cacic
 
- **Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: `Releases Cacic<https://github.com/lightbase/cacic/releases>`_
+**Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: `Releases Cacic<https://github.com/lightbase/cacic/releases>`_
  
 Configuração inicial
 ====================
@@ -253,7 +251,6 @@ Configuração inicial
 .. code-block:: bash
 
  setenforce Permissive
-
 
 + Salve a alteração abrindo o arquivo /etc/selinux/config:
 
@@ -372,6 +369,7 @@ Como pré-requisito já deve haver um banco de dados PostgreSQL configurado para
 
 + Altere as configurações no arquivo ``/srv/cacic/app/config/parameters.yml`` 
 
+.. code-block:: bash
 
  parameters:
     database_driver: pdo_pgsql
@@ -457,10 +455,9 @@ Instalando os Pacotes necessários:
  
  apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl
 
-
 **Configurando o PostgreSQL:**
 
- O arquivo "php.ini" vem com fuso horário da Europa, logo precisamos configurá-lo para o Brasil.
+O arquivo "php.ini" vem com fuso horário da Europa, logo precisamos configurá-lo para o Brasil.
  
 + Abra o arquivo "php.ini" através do comando abaixo:
 
@@ -472,7 +469,7 @@ Quando o arquivo abrir digite "``CTRL + W``" para abrir a ferramenta de busca e 
 
 Você verá o comando abaixo:
  
- .. code-block:: bash
+.. code-block:: bash
 
  [Date]
  
@@ -526,13 +523,13 @@ Montando ambiente de desenvolvimento
 
 A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, por razões de segurança, o novo diretório raiz para o servidor é:
  
- .. code-block:: bash
+.. code-block:: bash
 
  /var/www/html
 
 A partir de agora, é aqui que você deve lincar o CACIC.
  
- .. code-block:: bash
+.. code-block:: bash
 
  # ln -s /srv/cacic/web /var/www/html/cacic
 
@@ -544,7 +541,7 @@ Caso você queira mudar este diretório, você tem que modificar (como root) a s
 
 Para:
  
- .. code-block:: bash
+.. code-block:: bash
 
  DocumentRoot /var/www
 
@@ -561,7 +558,7 @@ Crie banco de dados para o Symfony - PostgreSQL
 
 Execute os seguintes comandos no terminal:
  
- .. code-block:: bash
+.. code-block:: bash
 
  $ sudo su
  
@@ -640,7 +637,7 @@ Digite "CTRL + X" para sair, confirme com "y" e "enter".
 
 .. code-block:: bash
 
-$ /etc/init.d/postgresql restart
+ $ /etc/init.d/postgresql restart
 
 Testando a conexão com o banco de dados:
 ======================================
@@ -649,7 +646,7 @@ Testando a conexão com o banco de dados:
 
  "exit" para sair de “root” 
  
- .. code-block:: bash
+.. code-block:: bash
 
  $ psql -U cacic -h localhost cacic
  
@@ -681,35 +678,35 @@ Configurando o arquivo parameters.yml
 .. code-block:: bash
 
  parameters:
+  
+      database_driver: pdo_pgsql
+  
+      database_host: IP_BancoDeDados
+  
+      database_port: null
+  
+      database_name: cacic
+  
+      database_user: cacic
+  
+      database_password: null
+  
+      mailer_transport: smtp
+  
+      mailer_host: 127.0.0.1
+  
+      mailer_user: null
+  
+      mailer_password: null
+  
+      locale: pt_BR
+  
+      secret: d7c123f25645010985ca27c1015bc76797
  
-     database_driver: pdo_pgsql
- 
-     database_host: IP_BancoDeDados
- 
-     database_port: null
- 
-     database_name: cacic
- 
-     database_user: cacic
- 
-     database_password: null
- 
-     mailer_transport: smtp
- 
-     mailer_host: 127.0.0.1
- 
-     mailer_user: null
- 
-     mailer_password: null
- 
-     locale: pt_BR
- 
-     secret: d7c123f25645010985ca27c1015bc76797
- 
-     database_path: null
+      database_path: null
 
 
- É necessário seguir um padrão de identação para que não ocorra erros na instalação do composer.phar. 
+É necessário seguir um padrão de identação para que não ocorra erros na instalação do composer.phar. 
 
 **Note que as linhas do arquivo parameters.yml possuem uma tabulação de 4 espaços que deverá ser preservada.** 
 
@@ -722,7 +719,7 @@ Executando comandos do Symfony
 
  Execute os comandos do Symfony necessários para o sistema funcionar:
  
- .. code-block:: bash
+.. code-block:: bash
 
  # su - www-data
  
@@ -730,19 +727,19 @@ Executando comandos do Symfony
  
  $ cd /srv/cacic
 
- Caso apareça a mensagem: “*This Accont is currently not available.*” 
+Caso apareça a mensagem: “*This Accont is currently not available.*” 
 
 + Acesso o arquivo passwd (digite nano /etc/passwd) 
 
- Altere a seguinte linha linha: 
+Altere a seguinte linha linha: 
  
- .. code-block:: bash
+.. code-block:: bash
 
  www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
 
- para:
+para:
  
- .. code-block:: bash
+.. code-block:: bash
 
  www-data:x:33:33:www-data:/var/www:/bin/bash
 
@@ -752,13 +749,13 @@ Executando comandos do Symfony
 
  $ php composer.phar install
 
- Aguarde o fim da instalação (este processo pode levar alguns minutos)
+Aguarde o fim da instalação (este processo pode levar alguns minutos)
 
  + Carregando os assets: (necessário haver o "java" instalado). 
 
  Ainda com o usuário www-data execute:
  
- .. code-block:: bash
+.. code-block:: bash
 
  $ php app/console doctrine:schema:update --force
  
@@ -815,51 +812,50 @@ Senha: 123456
 
  Para que os Agentes consigam coletar, é necessário instalar e configurar um serviço de FTP. O procedimento abaixo deve ser executado como usuário root: 
  
- .. code-block:: bash
+.. code-block:: bash
 
  # apt-get install proftpd-basic
 
  Quando perguntado, selecione o modo autônomo (standalone) para o servidor de FTP. Em seguida, abra o arquivo de configurações:
  
- .. code-block:: bash
+.. code-block:: bash
 
  # vim /etc/proftpd/proftpd.conf
 
- 
 + Descomente as linhas abaixo:
 
 .. code-block:: bash
  
  # Use this to jail all users in their homes
-  
+ 
  DefaultRoot                           ~
-  
+ 
  # Users require a valid shell listed in /etc/shells to login.
-  
+ 
  # Use this directive to release that constrain.
-  
+ 
  RequireValidShell                    off
  
 
- A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, parece que, por razões de segurança, o novo diretório raiz para o servidor é:
+A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, parece que, por razões de segurança, o novo diretório raiz para o servidor é:
  
- .. code-block:: bash
+.. code-block:: bash
  
  /var/www/html
 
- Adicione um usuário que será usado pelo CACIC para download dos updates. No exemplo a seguir, adicionamos uma conta ftpcacic:
+Adicione um usuário que será usado pelo CACIC para download dos updates. No exemplo a seguir, adicionamos uma conta ftpcacic:
  
- .. code-block:: bash
+.. code-block:: bash
 
  # adduser --shell /bin/false --home /var/www/html/ftpcacic ftpcacic
 
- Preencha a senha do usuário quando perguntado.
+Preencha a senha do usuário quando perguntado.
  
 Observe que o HOME deste usuário é: ``/var/www/html/ftpcacic``
 
  Nesse mesmo diretório crie uma pasta “agentes” utilizando os comandos a seguir:
  
- .. code-block:: bash
+.. code-block:: bash
 
  # mkdir /var/www/html/ftpcacic/agentes
  
@@ -869,7 +865,7 @@ Observe que o HOME deste usuário é: ``/var/www/html/ftpcacic``
 
  Primeiro você deverá reiniciar o proftpd com o comando a seguir:
  
- .. code-block:: bash
+.. code-block:: bash
 
  # /etc/init.d/proftpd restart
 
