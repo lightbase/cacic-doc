@@ -86,16 +86,16 @@ Instalação em CentOS 6
 
 **Preparação inicial.**
 
-+ Instale o software de suporte:
++ Instale o software de suporte: ::
  
-``cd /tmp``
+ cd /tmp
 
-``yum install wget java-1.8.0-openjdk``
+ yum install wget java-1.8.0-openjdk
 
 
 + Configure mirror da globo.com para software SCL                                                    
 
-``echo "``
+```echo "
 
 ``[SCL]``                                                                                    
 
@@ -113,7 +113,7 @@ Instalação em CentOS 6
 
 ``/etc/yum.repos.d/CentOS-SCL-globo.repo``                                                             
 
-``rpm --import http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6``                          
+``rpm --import http://mirror.globo.com/centos/RPM-GPG-KEY-CentOS-Testing-6```                       
 
 + PHP                                                                                                  
 
