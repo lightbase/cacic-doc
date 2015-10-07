@@ -466,11 +466,11 @@ Instalando os Pacotes necessários:
 
 .. code-block:: bash
 
-nano /etc/php5/apache2/php.ini
+ nano /etc/php5/apache2/php.ini
 
- Quando o arquivo abrir digite "``CTRL + W``" para abrir a ferramenta de busca e digite "``Module Settings``" 
+Quando o arquivo abrir digite "``CTRL + W``" para abrir a ferramenta de busca e digite "``Module Settings``" 
 
- Você verá o comando abaixo:
+Você verá o comando abaixo:
  
  .. code-block:: bash
 
@@ -487,7 +487,7 @@ nano /etc/php5/apache2/php.ini
  
  date.timezone = America/Sao_Paulo
 
- Em alguns casos, pode ser que já tenha na linha ``";date.timezone ="``, neste caso complete com “America/Sao_Paulo”.
+Em alguns casos, pode ser que já tenha na linha ``";date.timezone ="``, neste caso complete com “America/Sao_Paulo”.
 
 **Não esqueça de remover o “ponto e vírgula”**
 
@@ -524,25 +524,25 @@ Montando ambiente de desenvolvimento
 
  # ln -s /srv/cacic/web /var/www/cacic
 
- A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, por razões de segurança, o novo diretório raiz para o servidor é:
+A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, por razões de segurança, o novo diretório raiz para o servidor é:
  
  .. code-block:: bash
 
  /var/www/html
 
- A partir de agora, é aqui que você deve lincar o CACIC.
+A partir de agora, é aqui que você deve lincar o CACIC.
  
  .. code-block:: bash
 
  # ln -s /srv/cacic/web /var/www/html/cacic
 
- Caso você queira mudar este diretório, você tem que modificar (como root) a seguinte linha do arquivo /etc/apache2/sites-available/000-default.conf (sudo nano /etc/apache2/sites- available/000-default.conf): 
+Caso você queira mudar este diretório, você tem que modificar (como root) a seguinte linha do arquivo /etc/apache2/sites-available/000-default.conf (sudo nano /etc/apache2/sites- available/000-default.conf): 
 
 .. code-block:: bash
 
  DocumentRoot /var/www/html
 
- Para:
+Para:
  
  .. code-block:: bash
 
@@ -559,7 +559,7 @@ Crie banco de dados para o Symfony - PostgreSQL
 
  (É possível que já exista o banco de dados criado, caso isso ocorra passe para o próximo item). 
 
- Execute os seguintes comandos no terminal:
+Execute os seguintes comandos no terminal:
  
  .. code-block:: bash
 
