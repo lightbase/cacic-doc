@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ========================================
 Manual do Administrador do Sistema Cacic
 ========================================
@@ -1792,6 +1791,3 @@ pass senha_ftp
 quit
 
 **O FTP deve estar funcionando e conectando.**
-
-fim
->>>>>>> cc7f1a5ca07b25937c1b8b747a45ceebf07848fe
