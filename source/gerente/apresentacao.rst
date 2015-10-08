@@ -1733,7 +1733,6 @@ Senha: 123456
  
  RequireValidShell                    off
  
-
 A versão do apache2 que foi publicado com o lançamento do Ubuntu 14.04 é o 2.4.7 e começando com esta versão, parece que, por razões de segurança, o novo diretório raiz para o servidor é:
  
 .. code-block:: bash
