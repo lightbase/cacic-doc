@@ -1696,7 +1696,7 @@ Configurando o FTP (Opcional)
 
 Usuário: admin 
 
-Senha: 123456 
+Senha: 123456
 
 .. image:: img/entrada.png
 
