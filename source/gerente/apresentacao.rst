@@ -171,7 +171,7 @@ Instalação em CentOS 6
  
  ln -s cacic-3.1.14 cacic
 
-**Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: `Releases Cacic<https://github.com/lightbase/cacic/releases>`_
+**Obs.:** Para escolher outra release acesse a página do Cacic e veja a última disponível: `Releases Cacic <https://github.com/lightbase/cacic/releases>`_
  
 Configuração inicial
 ====================
