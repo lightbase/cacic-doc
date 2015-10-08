@@ -50,7 +50,9 @@ Digite a senha do root.
  
 + Desative o SE Linux. Para isso, execute o seguinte comando:
 
-``setenforce permissive``
+.. code-block:: bash
+
+	setenforce permissive
 
 **Esse comando não retornará nenhuma informação mesmo que seja executado com sucesso.**
 
@@ -186,7 +188,9 @@ Faça o download do código-fonte executando o seguinte comando:
 
 	wget https://pypi.python.org/packages/source/v/virtualenv/virtualenv-1.11.6.tar.gz
 
-Após a conclusão do download, descompacte o arquivo com o seguinte comando: 
+Após a conclusão do download, descompacte o arquivo com o seguinte comando:
+
+.. code-block:: bash
 
 	gzip –d virtualenv-1.11.6.tar.gz
 	
@@ -255,6 +259,8 @@ Salve e feche o arquivo e execute o seguinte comando:
 	cp development.ini-dist  development.ini
 
 Execute o seguinte comando :
+
+.. code-block:: bash
 
 	cd WSCacicNeo/
 	
@@ -342,7 +348,7 @@ O arquivo terá o seguinte código:
 	
 	'/home/eduardo/srv/lightbase-neo/src/LBGenerator/development.ini', 'main')
 	
-	.``
+	.
 	
 	import lbgenerator.monitor
 	
@@ -361,6 +367,7 @@ Após configurado o arquivo wsgi, abra e configure o arquivo development.ini:
 	vim development.ini
 
 Altere apenas a seção [alembic]:
+
 de:
 
 .. code-block:: bash
@@ -380,7 +387,7 @@ para:
 
 .. code-block:: bash
 
-[alembic]
+	[alembic]
 
 	sqlalchemy.url = postgresql://cacic:cacic@localhost/rest
 	
