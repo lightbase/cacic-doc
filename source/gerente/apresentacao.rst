@@ -799,7 +799,7 @@ Usuário: admin
 
 Senha: 123456 
 
-.. image:: img/login.png
+.. image:: img/entrada.png
 
 **Instalando e configurando o FTP (Debian)**
 
