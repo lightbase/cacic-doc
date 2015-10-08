@@ -714,7 +714,7 @@ Senha: 123456
 
 .. image:: img/login.png
 
-+ **Instalando e configurando o FTP (Debian) **
++ **Instalando e configurando o FTP (Debian)**
 
 
 **Atenção:**
