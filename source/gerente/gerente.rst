@@ -105,11 +105,6 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 			Forçar Coletas Subredes		
 		Versões Agentes
 
-
-----
-
-.. code-block:: html
-
 	MANUTENÇÃO
 		Cadastros	
 			Tipos de SO		
@@ -130,18 +125,10 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 		Localização
 
-----
-
-.. code-block:: html
-
 	COMPUTADORES
 		Navegar	
 		Consultar	
 		Busca Avançada
-
-----
-
-.. code-block:: html
 
 	RELATÓRIOS
 		Softwares	
@@ -179,10 +166,6 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 			WMI sem Coleta		
 			WMI Dinâmico		
 			Remoções
-
-----
-
-.. code-block:: html
 
 	DOWNLOADS
 
