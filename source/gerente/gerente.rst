@@ -75,7 +75,7 @@ Conhecendo as funcionalidades e menus do Cacic
 O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárquica:
 
 .. code-block:: html
-
+<html>
 	<b>ADMINISTRAÇÃO</b>
 
 		<b>Configurar Coletas</b>
@@ -132,6 +132,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 		<b>Versões Agentes</b>
 
+</html>
 ----
 
 .. code-block:: html
