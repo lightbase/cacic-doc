@@ -84,31 +84,25 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 			Configurar Módulos		
 			Ativar / Desativar Hardwares		
 			Ativar / Desativar Softwares		
-			Classes WMI
-		
+			Classes WMI		
 		Logs	
 			Acessos		
 			Atividades		
-			Insucessos Instalação
-		
+			Insucessos Instalação		
 		Cadastros	
 			Locais		
 			Servidores de Autenticação		
 			Sub-redes		
-			Computadores e Subredes
-		
+			Computadores e Subredes		
 		Usuários	
 			Cadastro de Usuários		
-			Grupo de Usuários
-		
+			Grupo de Usuários		
 		Patrimônio	
 			Unidades Organizacionais		
-			Tipos de Unidades Organizacionais
-		
+			Tipos de Unidades Organizacionais		
 		Forçar Coletas	
 			Forçar Coletas Computadores		
-			Forçar Coletas Subredes
-		
+			Forçar Coletas Subredes		
 		Versões Agentes
 
 
@@ -117,37 +111,21 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 .. code-block:: html
 
 	MANUTENÇÃO
-
-		Cadastros
-	
-			Tipos de SO
-		
-			Sistemas Operacionais
-		
-			Aplicativos Monitorados
-		
-			Dispositivos USB
-		
-			Dispositivos 3G
-		
-		Classificar Softwares
-	
-			Tipos de Softwares
-		
-			Selecionar Tipo
-		
-				Em Grupo
-			
-				Um por um
-			
-		Controle de Licenças
-	
-			Tipo de Licenças
-		
-			Processo de Aquisição
-		
-			Softwares Adquiridos
-		
+		Cadastros	
+			Tipos de SO		
+			Sistemas Operacionais		
+			Aplicativos Monitorados		
+			Dispositivos USB		
+			Dispositivos 3G			
+		Classificar Softwares	
+			Tipos de Softwares		
+			Selecionar Tipo		
+				Em Grupo			
+				Um por um			
+		Controle de Licenças	
+			Tipo de Licenças		
+			Processo de Aquisição		
+			Softwares Adquiridos		
 			Softwares por Estação
 		
 		Localização
@@ -157,11 +135,8 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 .. code-block:: html
 
 	COMPUTADORES
-
-		Navegar
-	
-		Consultar
-	
+		Navegar	
+		Consultar	
 		Busca Avançada
 
 ----
@@ -169,75 +144,40 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 .. code-block:: html
 
 	RELATÓRIOS
-
-		Softwares
-	
-			Relatório de Software
-		
-			Cadastro de Relatórios
-		
-			Softwares Inventariados
-		
-			Controle de Licenças
-		
-			Licenças Inativas
-		
-			Tipo de Software
-		
-			Software Desativados
-		
-		Computadores
-	
-			Faturamento
-		
-			Total de Computadores
-		
-			Relatório para Ateste
-		
-			Computadores Inativos
-		
-			Sistemas Operacionais
-		
-			Usuário Logado
-		
-		Hardware
-	
-			Classes WMI
-		
-				NetworkAdapterConfiguration
-			
-				OperationSystem
-			
-				Patrimônio
-			
-				Win32_BaseBoard
-			
-				Win32_BIOS
-			
-				Win32_ComputerSystem
-			
-				Win32_DesktopMonitor
-			
-				Win32_DiskDrive
-			
-				Win32_Keyboard
-			
-				Win32_MemoryDevice
-			
-				Win32_PhysicalMedia
-			
-				Win32_PhysicalMemory
-			
-				Win32_PointingDevice
-			
-				Win32_Printer
-			
-				Win32_Processor
-			
-			WMI sem Coleta
-		
-			WMI Dinâmico
-		
+		Softwares	
+			Relatório de Software		
+			Cadastro de Relatórios		
+			Softwares Inventariados		
+			Controle de Licenças		
+			Licenças Inativas		
+			Tipo de Software		
+			Software Desativados		
+		Computadores	
+			Faturamento		
+			Total de Computadores		
+			Relatório para Ateste		
+			Computadores Inativos		
+			Sistemas Operacionais		
+			Usuário Logado		
+		Hardware	
+			Classes WMI		
+				NetworkAdapterConfiguration			
+				OperationSystem			
+				Patrimônio			
+				Win32_BaseBoard			
+				Win32_BIOS			
+				Win32_ComputerSystem			
+				Win32_DesktopMonitor			
+				Win32_DiskDrive			
+				Win32_Keyboard			
+				Win32_MemoryDevice			
+				Win32_PhysicalMedia			
+				Win32_PhysicalMemory			
+				Win32_PointingDevice			
+				Win32_Printer			
+				Win32_Processor			
+			WMI sem Coleta		
+			WMI Dinâmico		
 			Remoções
 
 ----
