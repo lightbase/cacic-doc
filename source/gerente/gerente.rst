@@ -62,13 +62,119 @@ Conhecendo as funcionalidades e menus do Cacic
 
  Os menus do software Cacic são organizados tendo como base os perfis de grupos de usuários.
 
+**Grupo de usuários “Administradores”:** São os usuários previamente definidos que possuem acesso irrestrito ao sistema.
+
+**Grupo de usuários “Gestores”:** Possuem acesso de leitura em todas as opções. Manutenção de tabelas e acesso a todas as informações referentes à Localização. 
+
+**Grupo de usuários “Técnicos”:** Acesso técnico. Será permitido acessar configurações de rede e relatórios de Patrimônio e Hardware. Administração:
+
++ **Estrutura do Menu Principal**
+
 .. image:: img/menu_principal.png
 
-+ **Grupo de usuários “Administradores”:** São os usuários previamente definidos que possuem acesso irrestrito ao sistema.
+O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárquica:
 
-+ **Grupo de usuários “Gestores”:** Possuem acesso de leitura em todas as opções. Manutenção de tabelas e acesso a todas as informações referentes à Localização. 
+**ADMINISTRAÇÃO**
+	**Configurar Coletas**
+		Upload de Agentes
+		Deploy de Software
+		Atualização de Subredes
+		Configurar Módulos
+		Ativar / Desativar Hardwares
+		Ativar / Desativar Softwares
+		Classes WMI
+	**Logs**
+		Acessos
+		Atividades
+		Insucessos Instalação
+	**Cadastros**
+		Locais
+		Servidores de Autenticação
+		Sub-redes
+		Computadores e Subredes
+	**Usuários**
+		Cadastro de Usuários
+		Grupo de Usuários
+	**Patrimônio**
+		Unidades Organizacionais
+		Tipos de Unidades Organizacionais
+	**Forçar Coletas**
+		Forçar Coletas Computadores
+		Forçar Coletas Subredes
+	**Versões Agentes**
 
-+ **Grupo de usuários “Técnicos”:** Acesso técnico. Será permitido acessar configurações de rede e relatórios de Patrimônio e Hardware. Administração:
+----
+
+**MANUTENÇÃO**
+	**Cadastros**
+		Tipos de SO
+		Sistemas Operacionais
+		Aplicativos Monitorados
+		Dispositivos USB
+		Dispositivos 3G
+	**Classificar Softwares**
+		Tipos de Softwares
+		Selecionar Tipo
+			Em Grupo
+			Um por um
+	**Controle de Licenças**
+		Tipo de Licenças
+		Processo de Aquisição
+		Softwares Adquiridos
+		Softwares por Estação
+	**Localização**
+
+----
+
+**COMPUTADORES**
+	**Navegar**
+	**Consultar**
+	**Busca Avançada**
+
+----
+
+**RELATÓRIOS**
+	**Softwares**
+		Relatório de Software
+		Cadastro de Relatórios
+		Softwares Inventariados
+		Controle de Licenças
+		Licenças Inativas
+		Tipo de Software
+		Software Desativados
+	**Computadores**
+		Faturamento
+		Total de Computadores
+		Relatório para Ateste
+		Computadores Inativos
+		Sistemas Operacionais
+		Usuário Logado
+	**Hardware**
+		Classes WMI
+			NetworkAdapterConfiguration
+			OperationSystem
+			Patrimônio
+			Win32_BaseBoard
+			Win32_BIOS
+			Win32_ComputerSystem
+			Win32_DesktopMonitor
+			Win32_DiskDrive
+			Win32_Keyboard
+			Win32_MemoryDevice
+			Win32_PhysicalMedia
+			Win32_PhysicalMemory
+			Win32_PointingDevice
+			Win32_Printer
+			Win32_Processor
+		WMI sem Coleta
+		WMI Dinâmico
+		Remoções
+
+----
+
+**DOWNLOADS**
+
+**COMUNIDADE CACIC**
 
 ----
 
