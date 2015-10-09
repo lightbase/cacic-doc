@@ -74,11 +74,11 @@ Conhecendo as funcionalidades e menus do Cacic
 
 O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárquica:
 
-.. code-block:: bash
+.. code-block:: html
 
-	**ADMINISTRAÇÃO**
+	<b>ADMINISTRAÇÃO</b>
 
-		**Configurar Coletas**
+		<b>Configurar Coletas</b>
 	
 			Upload de Agentes
 	
@@ -94,7 +94,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Classes WMI
 		
-		**Logs**
+		<b>Logs</b>
 	
 			Acessos
 		
@@ -102,7 +102,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Insucessos Instalação
 		
-		**Cadastros**
+		<b>Cadastros</b>
 	
 			Locais
 		
@@ -112,33 +112,33 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Computadores e Subredes
 		
-		**Usuários**
+		<b>Usuários</b>
 	
 			Cadastro de Usuários
 		
 			Grupo de Usuários
 		
-		**Patrimônio**
+		<b>Patrimônio</b>
 	
 			Unidades Organizacionais
 		
 			Tipos de Unidades Organizacionais
 		
-		**Forçar Coletas**
+		<b>Forçar Coletas</b>
 	
 			Forçar Coletas Computadores
 		
 			Forçar Coletas Subredes
 		
-		**Versões Agentes**
+		<b>Versões Agentes</b>
 
 ----
 
-.. code-block:: bash
+.. code-block:: html
 
-	**MANUTENÇÃO**
+	<b>MANUTENÇÃO</b>
 
-		**Cadastros**
+		<b>Cadastros</b>
 	
 			Tipos de SO
 		
@@ -150,7 +150,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Dispositivos 3G
 		
-		**Classificar Softwares**
+		<b>Classificar Softwares</b>
 	
 			Tipos de Softwares
 		
@@ -160,7 +160,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 			
 				Um por um
 			
-		**Controle de Licenças**
+		<b>Controle de Licenças</b>
 	
 			Tipo de Licenças
 		
@@ -170,27 +170,27 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Softwares por Estação
 		
-		**Localização**
+		<b>Localização</b>
 
 ----
 
-.. code-block:: bash
+.. code-block:: html
 
-	**COMPUTADORES**
+	<b>COMPUTADORES</b>
 
-		**Navegar**
+		<b>Navegar</b>
 	
-		**Consultar**
+		<b>Consultar</b>
 	
-		**Busca Avançada**
+		<b>Busca Avançada</b>
 
 ----
 
-.. code-block:: bash
+.. code-block:: html
 
-	**RELATÓRIOS**
+	<b>RELATÓRIOS</b>
 
-		**Softwares**
+		<b>Softwares</b>
 	
 			Relatório de Software
 		
@@ -206,7 +206,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Software Desativados
 		
-		**Computadores**
+		<b>Computadores</b>
 	
 			Faturamento
 		
@@ -220,7 +220,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 		
 			Usuário Logado
 		
-		**Hardware**
+		<b>Hardware</b>
 	
 			Classes WMI
 		
@@ -262,12 +262,12 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 
 ----
 
-.. code-block:: bash
+.. code-block:: html
 
-	**DOWNLOADS**
+	<b>DOWNLOADS</b>
 
-	**COMUNIDADE CACIC**
-
+	<b>COMUNIDADE CACIC</b>
+	
 ----
 
 **Administração:**
