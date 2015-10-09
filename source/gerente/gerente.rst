@@ -74,189 +74,199 @@ Conhecendo as funcionalidades e menus do Cacic
 
 O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárquica:
 
-**ADMINISTRAÇÃO**
+.. code-block:: bash
 
-	**Configurar Coletas**
-	
-		Upload de Agentes
-	
-		Deploy de Software
-		
-		Atualização de Subredes
-		
-		Configurar Módulos
-		
-		Ativar / Desativar Hardwares
-		
-		Ativar / Desativar Softwares
-		
-		Classes WMI
-		
-	**Logs**
-	
-		Acessos
-		
-		Atividades
-		
-		Insucessos Instalação
-		
-	**Cadastros**
-	
-		Locais
-		
-		Servidores de Autenticação
-		
-		Sub-redes
-		
-		Computadores e Subredes
-		
-	**Usuários**
-	
-		Cadastro de Usuários
-		
-		Grupo de Usuários
-		
-	**Patrimônio**
-	
-		Unidades Organizacionais
-		
-		Tipos de Unidades Organizacionais
-		
-	**Forçar Coletas**
-	
-		Forçar Coletas Computadores
-		
-		Forçar Coletas Subredes
-		
-	**Versões Agentes**
+	**ADMINISTRAÇÃO**
 
-----
-
-**MANUTENÇÃO**
-
-	**Cadastros**
+		**Configurar Coletas**
 	
-		Tipos de SO
-		
-		Sistemas Operacionais
-		
-		Aplicativos Monitorados
-		
-		Dispositivos USB
-		
-		Dispositivos 3G
-		
-	**Classificar Softwares**
+			Upload de Agentes
 	
-		Tipos de Softwares
+			Deploy de Software
 		
-		Selecionar Tipo
+			Atualização de Subredes
 		
-			Em Grupo
-			
-			Um por um
-			
-	**Controle de Licenças**
+			Configurar Módulos
+		
+			Ativar / Desativar Hardwares
+		
+			Ativar / Desativar Softwares
+		
+			Classes WMI
+		
+		**Logs**
 	
-		Tipo de Licenças
+			Acessos
 		
-		Processo de Aquisição
+			Atividades
 		
-		Softwares Adquiridos
+			Insucessos Instalação
 		
-		Softwares por Estação
+		**Cadastros**
+	
+			Locais
 		
-	**Localização**
+			Servidores de Autenticação
+		
+			Sub-redes
+		
+			Computadores e Subredes
+		
+		**Usuários**
+	
+			Cadastro de Usuários
+		
+			Grupo de Usuários
+		
+		**Patrimônio**
+	
+			Unidades Organizacionais
+		
+			Tipos de Unidades Organizacionais
+		
+		**Forçar Coletas**
+	
+			Forçar Coletas Computadores
+		
+			Forçar Coletas Subredes
+		
+		**Versões Agentes**
 
 ----
 
-**COMPUTADORES**
+.. code-block:: bash
 
-	**Navegar**
+	**MANUTENÇÃO**
+
+		**Cadastros**
 	
-	**Consultar**
+			Tipos de SO
+		
+			Sistemas Operacionais
+		
+			Aplicativos Monitorados
+		
+			Dispositivos USB
+		
+			Dispositivos 3G
+		
+		**Classificar Softwares**
 	
-	**Busca Avançada**
+			Tipos de Softwares
+		
+			Selecionar Tipo
+		
+				Em Grupo
+			
+				Um por um
+			
+		**Controle de Licenças**
+	
+			Tipo de Licenças
+		
+			Processo de Aquisição
+		
+			Softwares Adquiridos
+		
+			Softwares por Estação
+		
+		**Localização**
 
 ----
 
-**RELATÓRIOS**
+.. code-block:: bash
 
-	**Softwares**
+	**COMPUTADORES**
+
+		**Navegar**
 	
-		Relatório de Software
-		
-		Cadastro de Relatórios
-		
-		Softwares Inventariados
-		
-		Controle de Licenças
-		
-		Licenças Inativas
-		
-		Tipo de Software
-		
-		Software Desativados
-		
-	**Computadores**
+		**Consultar**
 	
-		Faturamento
-		
-		Total de Computadores
-		
-		Relatório para Ateste
-		
-		Computadores Inativos
-		
-		Sistemas Operacionais
-		
-		Usuário Logado
-		
-	**Hardware**
-	
-		Classes WMI
-		
-			NetworkAdapterConfiguration
-			
-			OperationSystem
-			
-			Patrimônio
-			
-			Win32_BaseBoard
-			
-			Win32_BIOS
-			
-			Win32_ComputerSystem
-			
-			Win32_DesktopMonitor
-			
-			Win32_DiskDrive
-			
-			Win32_Keyboard
-			
-			Win32_MemoryDevice
-			
-			Win32_PhysicalMedia
-			
-			Win32_PhysicalMemory
-			
-			Win32_PointingDevice
-			
-			Win32_Printer
-			
-			Win32_Processor
-			
-		WMI sem Coleta
-		
-		WMI Dinâmico
-		
-		Remoções
+		**Busca Avançada**
 
 ----
 
-**DOWNLOADS**
+.. code-block:: bash
 
-**COMUNIDADE CACIC**
+	**RELATÓRIOS**
+
+		**Softwares**
+	
+			Relatório de Software
+		
+			Cadastro de Relatórios
+		
+			Softwares Inventariados
+		
+			Controle de Licenças
+		
+			Licenças Inativas
+		
+			Tipo de Software
+		
+			Software Desativados
+		
+		**Computadores**
+	
+			Faturamento
+		
+			Total de Computadores
+		
+			Relatório para Ateste
+		
+			Computadores Inativos
+		
+			Sistemas Operacionais
+		
+			Usuário Logado
+		
+		**Hardware**
+	
+			Classes WMI
+		
+				NetworkAdapterConfiguration
+			
+				OperationSystem
+			
+				Patrimônio
+			
+				Win32_BaseBoard
+			
+				Win32_BIOS
+			
+				Win32_ComputerSystem
+			
+				Win32_DesktopMonitor
+			
+				Win32_DiskDrive
+			
+				Win32_Keyboard
+			
+				Win32_MemoryDevice
+			
+				Win32_PhysicalMedia
+			
+				Win32_PhysicalMemory
+			
+				Win32_PointingDevice
+			
+				Win32_Printer
+			
+				Win32_Processor
+			
+			WMI sem Coleta
+		
+			WMI Dinâmico
+		
+			Remoções
+
+----
+
+.. code-block:: bash
+
+	**DOWNLOADS**
+
+	**COMUNIDADE CACIC**
 
 ----
 
@@ -328,7 +338,7 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 
  - **Dispositivos 3G:** O sistema Cacic, através dos seus Agentes, localiza em todas as máquinas monitoradas a presença de dispositivos para conexão 3G e os aloca neste módulo, onde é possível visualizar um dispositivo, editá-lo e também cadastrar um novo. Ao navegar pelo menu e clicar em “Dispositivos 3G”, será apresentada uma tela com os dispositivos já cadastrados, caso já exista algum. Para adicionar um novo dispositivo, clique em “Adicionar 3G”. Na tela seguinte, preencha os campos com os dados sobre o dispositivo que deseja cadastrar e clique em “Salvar Dados”.
 
-+ **Classificação de Software:** O Software Cacic através de seus Agentes, realiza uma varredura completa nos computadores que estão instalados e retornam ao Gerente as mais diversas informações sobre os softwares instalados e sobre os hardwares presentes no dispositivo. Neste módulo, é possível definir e classificar todos os tipos de softwares encontrados.
++ **Classificar Software:** O Software Cacic através de seus Agentes, realiza uma varredura completa nos computadores que estão instalados e retornam ao Gerente as mais diversas informações sobre os softwares instalados e sobre os hardwares presentes no dispositivo. Neste módulo, é possível definir e classificar todos os tipos de softwares encontrados.
 
  - **Tipo de Software:** Aqui é possível criar, visualizar e editar quais são os tipos de softwares encontrados nos computadores pelos Agentes do Cacic. Alguns exemplos são: Softwares Licenciados; Softwares Livres; Jogos e Similares; Software Suspeito, dentre outros. Ao navegar pelo menu e clicar em “Tipos de Softwares”, será apresentada uma tela com os tipos de softwares já cadastrados, caso já exista algum. Para adicionar um novo dispositivo, clique em “Software”. Na tela seguinte, preencha os campos com os dados sobre o software que deseja cadastrar e clique em “Salvar Dados”.
 
@@ -386,15 +396,16 @@ O Menu principal do Gerente Cacic é disposto com a seguinte estrutura hierárqu
 
  - **Computadores Inativos:** Relatório que apresenta todas as máquinas que não se comunicam com o sistema por mais que o tempo pré-definido.
 
-+ **Hardware:**
+ - **Sistemas Operacionais:** Este relatório permite que o usuário gere relatórios personalizados sobre sistemas operacionais. Para execução selecione o sistema que deseja gerar o relatório, podendo ser um ou mais, e clique em “Gerar Relatório”. O resultado será gerado em uma próxima tela. É possível também gerar um arquivo “.csv”.
+
+ - **Usuário Logado:** Este Relatório informa qual o usuário logado no sistema no momento em que a última coleta foi realizada. O log não representa o usuário logado no momento da coleta, pois sua atuação não é em tempo real. Para sua visualização, escolha o período desejado e caso tenha interesse, utilize um ou mais filtros disponíveis. Após, clique em “Gerar Relatório”.
+
+ 
+ + **Hardware:**
 
  - **Classes WMI:** Relatório das classes WMI do Windows.
 
  - **WMI Sem Coleta:** Este relatório permite que o usuário gere relatórios sobre máquinas que não tiveram classes WMI coletadas. Para execução selecione a classe que deseja gerar o relatório, podendo ser um ou mais, e clique em “Gerar Relatório”. O resultado será gerado em uma próxima tela.
-
- - **Sistemas Operacionais:** Este relatório permite que o usuário gere relatórios personalizados sobre sistemas operacionais. Para execução selecione o sistema que deseja gerar o relatório, podendo ser um ou mais, e clique em “Gerar Relatório”. O resultado será gerado em uma próxima tela. É possível também gerar um arquivo “.csv”.
-
- - **Usuário Logado:** Este Relatório informa qual o usuário logado no sistema no momento em que a última coleta foi realizada. O log não representa o usuário logado no momento da coleta, pois sua atuação não é em tempo real. Para sua visualização, escolha o período desejado e caso tenha interesse, utilize um ou mais filtros disponíveis. Após, clique em “Gerar Relatório”.
 
  - **WMI Dinâmico:** Este relatório permite que o usuário gere relatórios personalizados sobre todas as classes WMI disponíveis. Para execução selecione a classe que deseja gerar o relatório, podendo ser um ou mais, e clique em “Gerar Relatório”. O resultado será gerado em uma próxima tela.
 
