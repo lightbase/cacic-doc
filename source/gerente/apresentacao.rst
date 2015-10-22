@@ -39,7 +39,9 @@ Requisitos para Implantação
 
 |                             |- PHP com suporte a troca de arquivos por FTP. (php-FTP)                  |
 
-|                             |- PHP com suporte a conexão a serviço de diretórios padrão LDAP.(php-LDAP)|
+|                             |- PHP com suporte a conexão a serviço de diretórios padrão LDAP.          |
+
+|                             |(php-LDAP)                                                                |
 
 |                             |- PHP com suporte a imagens com GD (php-GD)                               |
 
