@@ -36,10 +36,15 @@ Requisitos para Implantação
 |Servidor de banco de dados:  |PostgreSQL 9.3                                                            |
 +-----------------------------+--------------------------------------------------------------------------+
 |PHP:                         |- Criptografia com MCrypt (php-MCrypt)                                    |
+
 |                             |- PHP com suporte a troca de arquivos por FTP. (php-FTP)                  |
+
 |                             |- PHP com suporte a conexão a serviço de diretórios padrão LDAP.(php-LDAP)|
+
 |                             |- PHP com suporte a imagens com GD (php-GD)                               |
+
 |                             |- PHP intl                                                                |
+
 |                             |- Biblioteca de criptografia SSL                                          |
 +-----------------------------+--------------------------------------------------------------------------+
 |APACHE:                      |- Memória para execução de programas PHP:--- 512MB (MINIMO)               |
