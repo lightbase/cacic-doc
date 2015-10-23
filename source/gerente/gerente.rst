@@ -575,8 +575,6 @@ Verificação de Logs
 
 ``[Error] {CheckModules} Problemas durante o download de chksys.exe``
 
-``[Error] {Cacic Daemon (Timer)} Falha na coleta: Error downloading https://10.209.8.110/app_dev.php/ws/neo/coleta - server replied: Internal Server Error``
-
 + **SCRIPT_CACIC:** Quando o Agente é instalado via script, também é gerado um log.
 
 ``-----------------------------UPDATE CACIC-----------------------------``

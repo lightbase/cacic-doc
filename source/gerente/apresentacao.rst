@@ -453,7 +453,7 @@ Instalando os Pacotes necessários:
 
 **Instale os pacotes que você vai precisar:**
 
-``apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl``
+apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl
 
 **Configurando o PostgreSQL:**
 

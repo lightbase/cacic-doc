@@ -16,16 +16,17 @@ Requisitos para Implantação
 
 **Requisitos Mínimos**
 
-+----------------------------------+---------------------------------------------------------------------+
-|SOFTWARE                                                                                                |
-+==================================+=====================================================================+
-|SISTEMA OPERACIONAL:              |CentOS 6.5                                                           |
-+----------------------------------+---------------------------------------------------------------------+
-|WSCServer:                        |Interface de consulta SOAP: Apache + PHP + MySQL                     |
-|                                  |Formato de dados de saída: XML                                       |
-+----------------------------------+---------------------------------------------------------------------+
-|WSCBot:                           |Plataforma tecnológica: daemon escrito na linguagem Python           |
-+----------------------------------+---------------------------------------------------------------------+
++------------------------+-----------------------------------------------------------+
+|SOFTWARE                                                                            |
++========================+===========================================================+
+|SISTEMA OPERACIONAL:    |CentOS 6.5                                                 |
++------------------------+-----------------------------------------------------------+
+|WSCServer:              |Interface de consulta SOAP: Apache + PHP + MySQL           |
+|                        |                                                           |
+|                        |Formato de dados de saída: XML                             |
++------------------------+-----------------------------------------------------------+
+|WSCBot:                 |Plataforma tecnológica: daemon escrito na linguagem Python |
++------------------------+-----------------------------------------------------------+
 
 **Requisitos de Infraestrutura**
 
@@ -348,7 +349,7 @@ O arquivo terá o seguinte código:
 	
 	'/home/eduardo/srv/lightbase-neo/src/LBGenerator/development.ini', 'main')
 	
-	.
+	
 	
 	import lbgenerator.monitor
 	
@@ -429,7 +430,7 @@ Insira código a seguir:
 	
 	'/home/eduardo/srv/lightbase-neo/src/WSCServer/development.ini', 'main')
 	
-	.
+	
 	
 	import wscserver.monitor
 	
@@ -493,7 +494,7 @@ O arquivo terá o seguinte código:
 	
 	#ini_path = '/srv/lightbase/LBBulk/production.ini'
 	
-	.
+	
 	
 	setup_logging(ini_path)
 	
