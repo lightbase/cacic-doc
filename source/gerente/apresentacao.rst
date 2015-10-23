@@ -39,9 +39,9 @@ Requisitos para Implantação
 |                             +--------------------------------------------------------------------------+
 |                             |- PHP com suporte a troca de arquivos por FTP. (php-FTP)                  |
 |                             +--------------------------------------------------------------------------+
-|                             |- PHP com suporte a conexão a serviço de diretórios padrão LDAP.          |
-|                             +--------------------------------------------------------------------------+
 |                             |- PHP com suporte a imagens com GD (php-GD)                               |
+|                             +--------------------------------------------------------------------------+
+|                             |- PHP com suporte a conexão a serviço de diretórios padrão LDAP.          |
 |                             +--------------------------------------------------------------------------+
 |                             |- PHP intl                                                                |
 |                             +--------------------------------------------------------------------------+
@@ -125,9 +125,7 @@ Instalação em CentOS 6
 
 + PHP                                                                                                  
 
-.. code-block:: bash
-
- yum install php54 php54-php php54-php-xml php54-php-pdo php54-php-gd php54-php-mcrypt  php54-php-pgsql php54-php-intl php54-php-pecl-apc
+yum install php54 php54-php php54-php-xml php54-php-pdo php54-php-gd php54-php-mcrypt php54-php-pgsql php54-php-intl php54-php-pecl-apc
 
 + Habilite nova versão do PHP                                                                           
 
@@ -148,7 +146,8 @@ Instalação em CentOS 6
 .. code-block:: bash
 
  cd /tmp
- wget https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm
+ wget
+ https://www.softwarecollections.org/repos/remi/php54more/epel-6-x86_64/php54-php-mcrypt-5.4.16-3.el6.x86_64.rpm
 
 + Corrija o fuso horário do php:
 
