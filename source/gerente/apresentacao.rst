@@ -264,87 +264,87 @@ Configuração inicial
 
 + Adicione as seguintes linhas no arquito /etc/sysconfig/iptables:
 
- # Firewall configuration written by system-config-firewall
+# Firewall configuration written by system-config-firewall
+
+# Manual customization of this file is not recommended.
  
- # Manual customization of this file is not recommended.
+*filter
  
- *filter
+:INPUT ACCEPT [0:0]
  
- :INPUT ACCEPT [0:0]
+:FORWARD ACCEPT [0:0]
  
- :FORWARD ACCEPT [0:0]
+:OUTPUT ACCEPT [0:0]
  
- :OUTPUT ACCEPT [0:0]
+-A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
  
- -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+-A INPUT -p icmp -j ACCEPT
  
- -A INPUT -p icmp -j ACCEPT
+-A INPUT -i lo -j ACCEPT
  
- -A INPUT -i lo -j ACCEPT
+# SSH somente nas redes autorizadas
  
- # SSH somente nas redes autorizadas
+-A INPUT -s 10.209.57.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
  
- -A INPUT -s 10.209.57.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+-A INPUT -s 10.209.156.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
  
- -A INPUT -s 10.209.156.0/24 -m state --state NEW -m tcp -p tcp --dport 22 -j ACCEPT
+# Portas HTTP e HTTPS
  
- # Portas HTTP e HTTPS
+-A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
  
- -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+-A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
  
- -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+# Samba
  
- # Samba
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT
  
- -A INPUT -m state --state NEW -m tcp -p tcp --dport 445 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT
  
- -A INPUT -m state --state NEW -m udp -p udp --dport 445 -j ACCEPT
+-A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
  
- -A INPUT -m state --state NEW -m tcp -p tcp --dport 139 -j ACCEPT
+-A INPUT -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT
  
- -A INPUT -m state --state NEW -m udp -p udp --dport 139 -j ACCEPT
+# Libera FTP
  
- # Libera FTP
+-A INPUT  -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
  
- -A INPUT  -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
+-A OUTPUT -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
  
- -A OUTPUT -p tcp -m tcp --dport 21 -j ACCEPT -m comment --comment "Allow ftp connections on port 21"
+-A INPUT  -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
  
- -A INPUT  -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+-A OUTPUT -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
  
- -A OUTPUT -p tcp -m tcp --dport 20 -j ACCEPT -m comment --comment "Allow ftp connections on port 20"
+-A INPUT  -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
  
- -A INPUT  -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
+-A OUTPUT -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
  
- -A OUTPUT -p tcp -m tcp --sport 1024: --dport 1024: -j ACCEPT -m comment --comment "Allow passive inbound connections"
+# Libera saída nas portas 80 e 443
  
- # Libera saída nas portas 80 e 443
+-A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
  
- -A OUTPUT -p tcp -m tcp --dport 80 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
  
- -A OUTPUT -p tcp -m tcp --dport 443 -j ACCEPT
+# Liera saída para o PostgreSQL
  
- # Liera saída para o PostgreSQL
+-A OUTPUT -p tcp -m tcp --dport 5432 -j ACCEPT
  
- -A OUTPUT -p tcp -m tcp --dport 5432 -j ACCEPT
+-A OUTPUT -p tcp -m tcp --dport 9999 -j ACCEPT
  
- -A OUTPUT -p tcp -m tcp --dport 9999 -j ACCEPT
+# Bloqueia saída nas portas SMTP
  
- # Bloqueia saída nas portas SMTP
+-A OUTPUT -p tcp -m tcp --dport 25 -j DROP
  
- -A OUTPUT -p tcp -m tcp --dport 25 -j DROP
+-A OUTPUT -p tcp -m tcp --dport 587 -j DROP
  
- -A OUTPUT -p tcp -m tcp --dport 587 -j DROP
+# Bloqueia o resto
  
- # Bloqueia o resto
+-A INPUT -j REJECT --reject-with icmp-host-prohibited
  
- -A INPUT -j REJECT --reject-with icmp-host-prohibited
+# Bloqueia o Forward
  
- # Bloqueia o Forward
+-A FORWARD -j REJECT --reject-with icmp-host-prohibited
  
- -A FORWARD -j REJECT --reject-with icmp-host-prohibited
- 
- COMMIT
+COMMIT
 
 ----
 
