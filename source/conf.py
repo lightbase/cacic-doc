@@ -54,11 +54,11 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Cacic'
-copyright = u''&copy; 2015, <a href="http://www.softwarepublico.gov.br/social/cacic" title="Comunidade Cacic">Comunidade Cacic</a>
+copyright = u'''&copy; 2015, <a href="http://www.softwarepublico.gov.br/social/cacic" title="Comunidade Cacic">Comunidade Cacic</a>
 Licenciado sob <a href="https://creativecommons.org/licenses/GPL/2.0/legalcode.pt">CC-GPL 2.0 PT-BR</a>
 <br>
 <img src="https://creativecommons.org/images/deed/logo_code.GPL.gif" alt="CC GPL 2.0 Logo" />
-''
+'''
 author = 'Eduardo F. Santos'
 
 # The version info for the project you're documenting, acts as replacement for
