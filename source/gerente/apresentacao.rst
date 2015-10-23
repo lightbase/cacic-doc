@@ -262,11 +262,7 @@ Configuração inicial
 
  SELINUX=disabled
 
-----
-
 + Adicione as seguintes linhas no arquito /etc/sysconfig/iptables:
-
-.. code-block:: bash
 
  # Firewall configuration written by system-config-firewall
  
@@ -455,9 +451,7 @@ Instalando os Pacotes necessários:
 
 **Instale os pacotes que você vai precisar:**
 
-.. code-block:: bash
- 
- apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl
+apt-get -y install git postgresql apache2 php5 php5-pgsql php5-gd php5-mcrypt libapache2-mod-php5 php5-ldap php-pear php-apc subversion git openjdk-7-jre php5-intl
 
 **Configurando o PostgreSQL:**
 
@@ -819,7 +813,7 @@ Senha: 123456
 
  # apt-get install proftpd-basic
 
- Quando perguntado, selecione o modo autônomo (standalone) para o servidor de FTP. Em seguida, abra o arquivo de configurações:
+Quando perguntado, selecione o modo autônomo (standalone) para o servidor de FTP. Em seguida, abra o arquivo de configurações:
  
 .. code-block:: bash
 
