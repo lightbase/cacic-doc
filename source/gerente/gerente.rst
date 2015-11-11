@@ -436,8 +436,98 @@ Instalação dos Agentes
 ======================
 
  A instalação dos agentes nas máquinas ocorre de uma forma clara e intuitiva. Existem instaladores próprios tanto para o sistema Windows quanto para o GNU/Linux.
+ 
 
-**Instalação em computadores Windows**
+Instalação em Debian/Ubuntu
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Este documento trata-se de um manual tipo passo a passo, para a simples   instalação/configuração do modulo agente do Cacic.
+
+Os exemplos foram realizados utilizando as últimas versões de ambos os módulos (agente e gerente), no sistema operacional GNU/Linux, distribuição Ubuntu versão 14.04 64bits.
+
+1. Observações iniciais
+
+a) i386 significa sistemas de 32bits
+b) amd64 significa sistemas de 64bits
+c) para o Ubuntu 12.04 é necessário adicionar o repositório a parte. 
+
+2. Instalando por interface gráfica
+
++ Faça o download dos pacotes de instalação no link: https://softwarepublico.gov.br/social/cacic/download/versoes-estaveis/v3.1.15/agente-linux
+
++ Verifique as configurações da máquina. (Versão do Ubuntu e tipo de sistema)
+
++ Abra o pacote correspondente, neste caso seria: cacic_ubuntu14.04_amd64.deb. E pressione o botão instalar. (caso apareça alguma mensagem, apenas ignore e continue a instalação)
+
+3. Instalando por linha de comando
+
+.. code-block:: bash
+
+ sudo dpkg -i cacic_ubuntu14.04_amd64.deb
+ sudo apt-get -f install
+
+4. Adicionando repositórios
+
+O Ubuntu 12.04 não resolve automaticamente as dependências necessárias para a  execução do módulo agente do Cacic. Para isso é necessário adicionar o repositório do Ubuntu Sdk Team.
+
+4.1. Adicionando repositório por modo gráfico
+
++ Abra a Central de programas do Ubuntu;
++ No menu global escolha a opção Editar e depois Canais de software;
++ Na primeira aba (Aplicativos Ubuntu) certifique-se que as opções (universe) e (multiverse) de “Disponíveis para baixar da internet” estão marcadas. Se não estiver marque-as.;
++ Na segunda aba (Outros programas) clique no botão Adicionar... e na Linha do APT digite: 
+
+``deb http://ppa.launchpad.net/ubuntu-sdk-team/ppa/ubuntu precise main``
+
++ Por fim apenas aguarde a atualização da Central de programas.
+
+4.2. Adicionando repositório por linha de comando.
+
+Com os repositórios (universe) e (multiverse) ativados, execute o comando abaixo:
+
+.. code-block:: bash
+
+ sudo apt-add-repository ppa:ubuntu-sdk-team/ppa -y && sudo apt-get update
+ 
+5. Iniciando o Cacic e instalando o daemon
+
+Após concluir a instalação do pacote e das dependências, é necessário ajustar algumas configurações, são elas: Endereço do servidor (modulo gerente), usuário e senha para estabelecer a conexão com o mesmo.
+
+Sabendo o endereço do gerente o usuário a senha, abra o terminal (Ctrl+T) e digite:
+
+.. code-block:: bash
+
+ sudo install-cacic -host=endereçoDoGerente -user=nomeDeUsuário -pass=senhaDoUsuário
+ 
+Caso as seguintes mensagens apareçam o daemon foi baixado e instalado com sucesso:
+
+.. code-block::
+
+ - - INSTALL CACIC - -
+ Realizando login...
+ Login realizado com sucesso...
+ Pegando informações do gerente...
+ Sucesso, salvando configurações em arquivo...
+ Realizando download do serviço...
+ Baixando serviço...
+ Iniciando serviço...
+ Instalado com sucesso.
+
+6. Observações finais
+
++ Sempre verifique se os binários (tanto PE como ELF) estão corretamente adicionados no gerente antes de começar a instalação. Atualmente são apenas três:
+
+    + install-cacic
+    + cacic-service
+    + gercols	
+
++ Caso ocorra algum erro, verificar o arquivo de log pode facilitar a detecção e consequente solução do problema.
+
+    /usr/share/cacic/Logs/cacic.log
+
+
+Instalação em computadores Windows
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
  Para instalação em ambiente Windows, basta baixar o arquivo “.msi” do repositório e execute o programa. 
 
@@ -483,108 +573,81 @@ Verificação de Logs
 
 + **cacic:** Este arquivo apresenta todas as atividades do Agente Cacic, como instalação, atualização e coletas.
 
- - **Instalação:** Quando o processo de instalação ocorre sem erros, o Agente reporta um log como este: (O conteúdo dos logs podem variar conforme a máquina, mas deve ser parecido com este)
+- **Instalação:** Quando o processo de instalação ocorre sem erros, o Agente reporta um log como este: (O conteúdo dos logs podem variar conforme a máquina, mas deve ser parecido com este)
 
-``[13-05-2015 11:01:00.783] [Info] {Install Cacic} Inicio de instalacao``
+.. code-block:: 
 
-``[13-05-2015 11:01:00.788] [Info] {Install Cacic} Realizando login...``
+ [13-05-2015 11:01:00.783] [Info] {Install Cacic} Inicio de instalacao
+ [13-05-2015 11:01:00.788] [Info] {Install Cacic} Realizando login...
+ [13-05-2015 11:01:02.277] [Info] {Install Cacic} Login realizado com sucesso!
+ [13-05-2015 11:01:03.524] [Info] {Install Cacic} Pegando informacoes do gerente...
+ [13-05-2015 11:01:04.275] [Info] {Install Cacic} Sucesso! Salvando configuracoes em arquivo...
+ [13-05-2015 11:01:04.285] [Info] {Install Cacic} Realizando download do servico...
+ [13-05-2015 11:01:04.306] [Info] {Install Cacic} Instalando servico.
+ [13-05-2015 11:01:04.313] [Info] {Cacic Daemon} Servico parado.
+ [13-05-2015 11:01:04.878] [Info] {Cacic Daemon} Cacic 3.1.11 iniciado.
+ [13-05-2015 11:01:05.878] [Info] {Install Cacic} Instalacao realizada com sucesso.
 
-``[13-05-2015 11:01:02.277] [Info] {Install Cacic} Login realizado com sucesso!``
+- **Coleta:** Quando o Agente realiza sua consulta, ele somente a envia para o gerente caso esta seja diferente da coleta já existente.
 
-``[13-05-2015 11:01:03.524] [Info] {Install Cacic} Pegando informacoes do gerente...``
+- **Enviando coletas:**
 
-``[13-05-2015 11:01:04.275] [Info] {Install Cacic} Sucesso! Salvando configuracoes em arquivo...``
+.. code-block::
 
-``[13-05-2015 11:01:04.285] [Info] {Install Cacic} Realizando download do servico...``
+ [10-05-2015 03:27:23.737] [Info] {Cacic Daemon (Thread)} Thread iniciada em: dom mai 10 03:27:23 2015
+ [10-05-2015 03:27:24.205] [Info] {Gercols} Iniciando coleta de hardware.
+ [10-05-2015 03:27:25.702] [Info] {Gercols} Coleta de hardware finalizada.
+ [10-05-2015 03:27:25.702] [Info] {Gercols} Iniciando coleta de software.
+ [10-05-2015 03:27:25.718] [Info] {Gercols} Coleta de software finalizada.
+ [10-05-2015 03:27:27.995] [Info] {Gercols} Novas informacoes prontas para o envio ao gerente.
+ [10-05-2015 03:27:28.073] [Info] {Cacic Daemon (Thread)} Thread finalizada com SUCESSO
+ [10-05-2015 03:27:28.073] [Info] {Cacic Daemon (Timer)} Enviando coleta ao gerente.
+ [10-05-2015 03:28:04.702] [Info] {Cacic Daemon (Timer)} Coleta enviada com sucesso.
 
-``[13-05-2015 11:01:04.306] [Info] {Install Cacic} Instalando servico.``
+- **Sem coletas para enviar:**
 
-``[13-05-2015 11:01:04.313] [Info] {Cacic Daemon} Servico parado.``
+.. code-block::
 
-``[13-05-2015 11:01:04.878] [Info] {Cacic Daemon} Cacic 3.1.11 iniciado.``
+ [10-05-2015 04:25:48.206] [Info] {Cacic Daemon (Thread)} Thread iniciada em: dom mai 10 04:25:48 2015
+ [10-05-2015 04:25:48.564] [Info] {Gercols} Iniciando coleta de hardware.
+ [10-05-2015 04:25:49.906] [Info] {Gercols} Coleta de hardware finalizada.
+ [10-05-2015 04:25:49.906] [Info] {Gercols} Iniciando coleta de software.
+ [10-05-2015 04:25:49.922] [Info] {Gercols} Coleta de software finalizada.
+ [10-05-2015 04:25:51.856] [Info] {Gercols} Coleta sem alteracoes.
+ [10-05-2015 04:25:51.934] [Info] {Cacic Daemon (Thread)} Thread finalizada com SUCESSO
+ [10-05-2015 04:25:51.934] [Info] {Cacic Daemon (Timer)} Sem diferenca na coleta.
 
-``[13-05-2015 11:01:05.878] [Info] {Install Cacic} Instalacao realizada com sucesso.``
+- **Atualização:** O Agente ao se comunicar com o Gerente, recebe informações sobre a última versão dos agentes no servidor, caso sua versão esteja desatualizada, o mesmo realizará sua atualização antes de efetuar o envio das coletas.
 
- - **Coleta:** Quando o Agente realiza sua consulta, ele somente a envia para o gerente caso esta seja diferente da coleta já existente.
+.. code-block::
 
-  - **Enviando coletas:**
-
-``[10-05-2015 03:27:23.737] [Info] {Cacic Daemon (Thread)} Thread iniciada em: dom mai 10 03:27:23 2015``
-
-``[10-05-2015 03:27:24.205] [Info] {Gercols} Iniciando coleta de hardware.``
-
-``[10-05-2015 03:27:25.702] [Info] {Gercols} Coleta de hardware finalizada.``
-
-``[10-05-2015 03:27:25.702] [Info] {Gercols} Iniciando coleta de software.``
-
-``[10-05-2015 03:27:25.718] [Info] {Gercols} Coleta de software finalizada.``
-
-``[10-05-2015 03:27:27.995] [Info] {Gercols} Novas informacoes prontas para o envio ao gerente.``
-
-``[10-05-2015 03:27:28.073] [Info] {Cacic Daemon (Thread)} Thread finalizada com SUCESSO``
-
-``[10-05-2015 03:27:28.073] [Info] {Cacic Daemon (Timer)} Enviando coleta ao gerente.``
-
-``[10-05-2015 03:28:04.702] [Info] {Cacic Daemon (Timer)} Coleta enviada com sucesso.``
-
-  - **Sem coletas para enviar:**
-
-``[10-05-2015 04:25:48.206] [Info] {Cacic Daemon (Thread)} Thread iniciada em: dom mai 10 04:25:48 2015``
-
-``[10-05-2015 04:25:48.564] [Info] {Gercols} Iniciando coleta de hardware.``
-
-``[10-05-2015 04:25:49.906] [Info] {Gercols} Coleta de hardware finalizada.``
-
-``[10-05-2015 04:25:49.906] [Info] {Gercols} Iniciando coleta de software.``
-
-``[10-05-2015 04:25:49.922] [Info] {Gercols} Coleta de software finalizada.``
-
-``[10-05-2015 04:25:51.856] [Info] {Gercols} Coleta sem alteracoes.``
-
-``[10-05-2015 04:25:51.934] [Info] {Cacic Daemon (Thread)} Thread finalizada com SUCESSO``
-
-``[10-05-2015 04:25:51.934] [Info] {Cacic Daemon (Timer)} Sem diferenca na coleta.``
-
- - **Atualização:** O Agente ao se comunicar com o Gerente, recebe informações sobre a última versão dos agentes no servidor, caso sua versão esteja desatualizada, o mesmo realizará sua atualização antes de efetuar o envio das coletas.
-
-``[13-05-2015 11:58:33.163] [Info] {Cacic Daemon (Timer)} Realizando comunicacao em: 10.209.8.110/app_dev.php``
-
-``[13-05-2015 11:58:37.905] [Info] {CheckModules} Atualizacao de gercols.exe necessaria.``
-
-``[13-05-2015 11:58:37.949] [Info] {CheckModules} gercols.exe baixado com sucesso!``
-
-``[13-05-2015 11:58:37.952] [Info] {CheckModules} Atualizacao de install-cacic.exe necessaria.``
-
-``[13-05-2015 11:58:37.996] [Info] {CheckModules} install-cacic.exe baixado com sucesso!``
+ [13-05-2015 11:58:33.163] [Info] {Cacic Daemon (Timer)} Realizando comunicacao em: 10.209.8.110/app_dev.php
+ [13-05-2015 11:58:37.905] [Info] {CheckModules} Atualizacao de gercols.exe necessaria.
+ [13-05-2015 11:58:37.949] [Info] {CheckModules} gercols.exe baixado com sucesso!
+ [13-05-2015 11:58:37.952] [Info] {CheckModules} Atualizacao de install-cacic.exe necessaria.
+ [13-05-2015 11:58:37.996] [Info] {CheckModules} install-cacic.exe baixado com sucesso!
 
 + **cacic_error:** O Agente também informa quando algum erro ocorre. Alguns possíveis erros.
 
-``[Error] {CheckModules} Problemas durante o download de cacic-service.exe``
+.. code-block::
 
-``[Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.``
-
-``[Error] {CheckModules} Problemas durante o download de chksys.exe``
-
-``[Error] {Cacic Daemon (Timer)} Problemas ao checkar modulos.``
-
-``[Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.``
-
-``[Error] {CheckModules} Problemas durante o download de cacic-service.exe``
-
-``[Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.``
-
-``[Error] {CheckModules} Problemas durante o download de chksys.exe``
+ [Error] {CheckModules} Problemas durante o download de cacic-service.exe
+ [Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.
+ [Error] {CheckModules} Problemas durante o download de chksys.exe
+ [Error] {Cacic Daemon (Timer)} Problemas ao checkar modulos.
+ [Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.
+ [Error] {CheckModules} Problemas durante o download de cacic-service.exe
+ [Error] {CheckModules} O arquivo ja esta sendo usado por outro processo.
+ [Error] {CheckModules} Problemas durante o download de chksys.exe
 
 + **SCRIPT_CACIC:** Quando o Agente é instalado via script, também é gerado um log.
 
-``-----------------------------UPDATE CACIC-----------------------------``
+.. code-block::
 
-``20/02/2015 - Conectando via Samba...``
+ -----------------------------UPDATE CACIC-----------------------------
 
-``20/02/2015 - MSI encontrando, realizando instalação cacic 3.0...``
-
-``20/02/2015 - Removendo conexão com a partição Samba...``
-
-``20/02/2015 - Deletando vestigios de atualizacao...``
-
-``20/02/2015 - Deletando pasta temporaria...``
+ 20/02/2015 - Conectando via Samba...
+ 20/02/2015 - MSI encontrando, realizando instalação cacic 3.0...
+ 20/02/2015 - Removendo conexão com a partição Samba...
+ 20/02/2015 - Deletando vestigios de atualizacao...
+ 20/02/2015 - Deletando pasta temporaria...
